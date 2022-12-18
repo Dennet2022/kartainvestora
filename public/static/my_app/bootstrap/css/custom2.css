@@ -1,0 +1,1728 @@
+html, header, footer, body {
+  font-family: Arial;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body{
+  background-color: #fff;
+  transition: background-color 0.6s ease, color 1s ease;
+padding-right: 0 !important
+}
+a {
+  text-decoration: none !important;
+}
+.link{
+  color: #1652F0;
+
+}
+
+.button {
+  background-color: #1652F0;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  color: #E1E1E1;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #3E69D6;
+  color: #fff;
+}
+
+br, hr {
+  display: inline;
+}
+
+
+/*import fonts*/
+@font-face {
+  src:url('fonts/Chomsky.otf');
+
+    font-family: 'chomsky';
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* NAV BAR */
+.navbar {
+  background-color: #fff;
+  transition: background-color 0.6s ease, color 1s ease;
+}
+
+.navbar-brand {
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+position: absolute;
+left: 90px;
+}
+
+.navbar-brand:hover {
+  color: #000;
+}
+#moon{
+  height: 26px;
+  width: 26px;
+position: relative;
+bottom: 2px;
+}
+.navbar-header span {
+  float: right;
+  margin-top: 10px;
+  position: absolute;
+  right: 1px;
+  margin-right: 75px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.navbar-header span:hover {
+  background-color: #f6f6f6;
+}
+
+/* Footer */
+.footer-resp{
+  display: none;
+}
+
+.foot {
+  background-color: #F6F6F6;
+  transition: background-color 0.6s ease, color 1s ease;
+
+  display: flex;
+  margin-top: 100px;
+}
+
+.fit {
+  display: block;
+  width: 120px;
+  margin : 40px auto 0 auto;
+}
+
+.donate {
+  width: 120px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 15px;
+}
+
+.footer-log {
+  width: 100%;
+}
+.footer-brand{
+  position: relative;
+  left: 0;
+}
+.sec {
+  display: inline-block;
+  width: 33%;
+}
+
+
+
+.sec1 {
+  padding-left: 75px;
+  padding-top: 25px;
+}
+
+
+
+.icon {
+  margin-left: 15px;
+}
+.icon img{
+  width: 24px;
+}
+.icons {
+display: block;
+margin-top : 130px;
+width: 100px;
+}
+
+.bit {
+  margin-bottom: 40px;
+  color: #6D6B6B;
+  word-wrap: break-word;
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.sec3 a{
+  display: block;
+
+}
+.footer-log{
+  color: rgb(88, 102, 126);
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 30%;
+  margin-top: 40px;
+}
+.footer-log:hover{
+  color: rgb(56, 97, 251);
+}
+.down {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  text-align: center;
+  color: #6D6B6B;
+  margin-bottom: 10px;
+}
+
+
+/* HEADER*/
+.header {
+  background-color: #F6F6F6;
+  padding-bottom: 60px;
+  transition: background-color 0.6s ease, color 1s ease;
+
+}
+
+.title {
+  display: inline-block;
+  margin-left: 90px;
+  padding-top: 100px;
+   position: relative;
+    z-index: 5
+}
+
+.title h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  width: 500px;
+}
+
+.title p {
+  padding-top: 10px;
+  font-size: 18px;
+  width: 370px;
+  color: #707070;
+  line-height: 28px;
+  font-style: normal;
+}
+
+.mail {
+  width: fit-content;
+  margin-left: 90px;
+  margin-top: 20px;
+  display: table;
+  position: relative;
+  z-index: 5
+}
+
+input {
+  width: 270px;
+  height: 68px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: 0 0 5px #719ECE;
+}
+
+.sub {
+  cursor: pointer;
+  font-size: 17px;
+  display: inline-block;
+  float: right;
+  width: 130px;
+  height: 68px;
+  line-height: 68px;
+  margin-left: 15px;
+  border-radius: 7px;
+}
+.hidden{
+  display: none;
+}
+.invalid-mail{
+  background-color: rgba(255, 23, 73, 0.04) !important;
+  border: 1px solid rgb(234, 57, 67) !important;
+}
+.invalid-msg{
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(255, 23, 73);
+  margin: 8px 0px;
+  display: block;
+}
+.valid-msg{
+  font-size: 12px;
+  font-weight: 500;
+  color: #4AA96C;
+  margin: 8px 0px;
+  display: block;
+}
+.head-img {
+  width: 500px;
+  height: auto;
+  transform: rotate(-7.6deg);
+  filter: drop-shadow(4.59594px 45.9594px 50px rgba(0, 0, 0, 0.25));
+}
+
+.img1 {
+  position: absolute;
+  right: 120px;
+  top: 170px;
+  z-index: 2;
+}
+
+.img2 {
+  position: absolute;
+  right: 80px;
+  top: 195px;
+  z-index: 1;
+}
+
+.featured h5 {
+  color: #474747;
+  font-size: 20px;
+}
+
+.featured {
+  margin-left: 90px;
+  margin-top: 40px;
+}
+
+.financial, .new-york {
+  font-size: 30px;
+}
+
+.financial, .financial:focus, .financial:hover, .financial:active {
+  padding-left: 20px;
+  font-family: Financier Text;
+  color: black;
+}
+
+.new-york, .new-york:focus, .new-york:hover, .new-york:active {
+  padding-left: 20px;
+  font-family: chomsky;
+  color: black;
+}
+
+
+
+
+/* Filter*/
+.filter {
+  margin-top: 70px;
+}
+
+.active {
+  background-color: #F0F6FF;
+  color: #3E69D6 !important;
+}
+
+.filter span {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 7px 15px 7px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: #58667E;
+  cursor: pointer;
+}
+
+.filter span:hover {
+  background-color: #f6f6f6;
+}
+
+/*  cards  */
+.card {
+  width: 50rem;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 7px 1px #ccc;
+  border-radius: 7px;
+  margin: 70px 0 0 9%;
+  display: inline-block;
+}
+
+.card h5 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  padding: 60px 0 20px 0;
+}
+
+.card img {
+  width: 45rem;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.card a :hover{
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.card p {
+  width: 42rem;
+  height: 8rem;
+  font-size: 16px;
+  color: #474747;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.card-btn {
+  width: 120px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 35px;
+}
+
+/*darkMode navbar*/
+.darkmode {
+  background-color: #171717;
+    transition: background-color 0.6s ease, color 1s ease;
+}
+
+.darkmode .navbar {
+  background-color: #171717;
+    transition: background-color 0.6s ease, color 1s ease;
+}
+
+.darkmode .navbar-brand {
+  color: #fff;
+}
+
+.darkmode .navbar-brand:hover {
+  color: #fff;
+}
+
+.darkmode .navbar-header span:hover {
+  background-color: #222531;
+}
+
+
+
+
+
+
+
+
+/*darkmode footer*/
+.darkmode .foot {
+  background-color: #212430;
+    transition: background-color 0.6s ease, color 1s ease;
+}
+
+.darkmode .bit {
+  color: #CBCBCB;
+}
+
+.darkmode .down {
+  color: #CBCBCB;
+}
+
+.darkmode .footer-resp{
+
+  background-color: #212430;
+
+}
+.darkmode .footer-log{
+
+  color: rgb(160, 160, 160);
+
+}
+.darkmode .footer-log:hover{
+
+  color: rgb(97, 136, 255);
+
+}
+.darkmode .footer-resp p {
+  color: #CBCBCB;
+}
+
+
+
+
+
+
+
+
+/*darkmode header*/
+.darkmode .header {
+  background-color: #212430;
+  transition: background-color 0.6s ease, color 1s ease;
+}
+
+
+
+.darkmode .title p {
+
+  color: #E2E1E1;
+
+}
+
+.darkmode #email-subscribe-input{
+  background-color: rgb(34, 37, 49);
+  border: 1px solid rgb(64, 66, 78);
+  transition: background-color 0.6s ease, color 1s ease;
+color: #fff;
+}
+
+
+.darkmode h2{
+  color: #fff;
+}
+
+.darkmode h5 {
+  color: #fff;
+}
+
+
+.darkmode .financial, .darkmode .financial:focus,.darkmode  .financial:hover, .darkmode .financial:active {
+
+  color: #fff;
+}
+
+.darkmode .new-york, .darkmode .new-york:focus, .darkmode .new-york:hover, .darkmode .new-york:active {
+
+  color: #fff;
+}
+
+
+
+
+
+
+
+/*darkmode filter*/
+
+.darkmode .active {
+  background-color: #21263E;
+  transition: background-color 0.6s ease, color 1s ease;
+
+}
+
+.darkmode .filter span {
+  color: #E2E3E4;
+}
+
+.darkmode .filter span:hover {
+  background-color: #222531;
+}
+
+
+
+
+/*darkmode cards*/
+.darkmode .card {
+  background-color: #1f1f1f;
+  transition: background-color 0.6s ease, color 1s ease;
+
+  box-shadow: 0px 0px 7px 1px #141414;
+
+}
+
+
+.darkmode .card p {
+  color: #ECECEC;
+}
+.darkmode .card img{
+filter: grayscale(25%) ;
+
+}
+.darkmode .side-content img{
+  filter: contrast(65%) ;
+  }
+
+/* PHOOOOOOOOOOOOOONE PHONE VERSION phone*/
+@media only screen and (max-width: 550px) {
+  /*NAVBARR phone*/
+
+  .navbar-brand{
+    font-size: 3.5vw;
+padding-left: 0.2em;
+  }
+.navbar-header span{
+  margin-right: 20px;
+}
+/*header phone */
+  .title {
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4.5em;
+margin-bottom: 2.5em;
+
+  }
+
+  .title h2 {
+text-align: center;
+    font-weight: 700;
+    font-size: 9vw;
+    line-height: 13vw;
+    width: 100%;
+  }
+
+
+  .title p {
+    font-size: 4.5vw;
+    line-height: 8vw;
+
+    width: 90%;
+    margin: auto;
+    padding-top: 2em;
+
+  }
+
+  .mail {
+width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.75em;
+
+
+  }
+
+  input {
+    width: 100%;
+    height: 5em;
+padding-left: 3em;
+margin-bottom: 0.625em;
+font-size: 4vw;
+display: block;
+
+ }
+
+
+  .sub {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    font-size: 4.5vw;
+    height: 4.5em;
+    line-height: 4.5em;
+
+  }
+  .head-img{
+    display: none;
+  }
+
+  .featured h5 {
+
+    font-size: 6vw;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+
+  .featured {
+    padding-top: 2.5em;
+  margin: auto;
+  }
+
+  .financial, .new-york {
+    font-size: 5vw;
+  }
+
+  .financial, .financial:focus, .financial:hover, .financial:active {
+    margin-left: auto;
+    padding-left: 15px;
+  }
+
+  .new-york, .new-york:focus, .new-york:hover, .new-york:active {
+    margin-right: auto;
+
+  }
+
+
+
+
+
+
+  /*filter phone*/
+  .filter {
+    margin-top: 3.5em;
+      margin-bottom:  0.5em;
+  }
+
+  .filter span {
+
+    font-size: 3vw;
+    padding: 7px 15px 7px 15px;
+    margin-left: 0.5em;
+
+  }
+.real{
+  display: none;
+}
+
+
+
+
+/*caards phone*/
+.card {
+  max-width: 90%;
+height: 100%;
+margin-left: auto;
+margin-right:auto;
+margin-top: 3.5em;
+display: block;
+}
+
+.card h5 {
+  font-size: 4vw;
+}
+
+.card img {
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 1.25em;
+}
+
+.card p {
+  width: 25em;
+  height: 8rem;
+  font-size: 3vw;
+  margin: auto;
+}
+
+.card-btn {
+  width: 7.5em;
+  height: 3.4375em;
+  line-height: 3.4375em;
+  font-size: 3vw;
+  margin-bottom: 2em;
+  margin-top:  2.1875em;
+}
+
+
+
+/* footer phone */
+
+.foot {
+display: none;
+}
+.footer-resp{
+  display: inherit;
+  background-color: #f6f6f6;
+  padding-top: 3em;
+  margin-top: 3em;
+}
+.donate-resp{
+  width: 8em;
+  height: 4em;
+  line-height: 4em;
+  font-size: 3.5vw;
+}
+.fit{
+  display: block;
+  width: fit-content;
+  margin-top: 6em;
+  margin-bottom: 4em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-resp p {
+  width: 80%;
+  color: #6D6B6B;
+  line-height: 2.5em;
+  padding-bottom: 2em;
+  padding-left: 2em;
+}
+
+.icons{
+padding-bottom: 2em;
+margin-top: 30px;
+}
+.footer-log{
+  display: block;
+  margin-left: 15px;
+  padding-left: 1em;
+}
+
+}
+/* Tablet Tablet Tablet */
+@media only screen and (max-width: 850px)and (min-width : 1024px){
+  /*header tablet*/
+
+  .navbar-brand  {
+    position: absolute;
+    left: 1.4em;
+    padding-left: 0;
+    margin-left: 0 !important;
+  }
+  .navbar-header span{
+    margin-right: 10px;
+  }
+.icons{
+  margin-left: 0.8em;
+}
+checkout_form
+  .title h2 {
+    max-width: 450px;
+word-wrap: break-word;
+ }
+
+
+.card {
+  max-width: 90%;
+height: 100%;
+margin-left: auto;
+margin-right:auto;
+margin-top: 3.5em;
+display: block;
+}
+footer .bit{
+  width:200px;
+  word-wrap: break-word;
+
+}
+.sec1{
+  padding-left: 0;
+}
+.footer-log{
+  margin-left: 100px;
+}
+}
+/* ipad pro*/
+@media only screen and (max-width: 1024px) and (min-width : 550px)  {
+  .head-img{
+    display: none;
+  }
+  .title , .mail,   .featured{
+    margin-left: 27px;
+  }
+
+   .card{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* ---------------------------------------------------------- market cap to gdp --------------------------------------------------*/
+.header-market{
+  background-color: #f6f6f6;
+  transition: background-color 0.6s ease, color 1s ease;
+  height: 120px;
+margin-bottom: 30px;
+
+}
+.header-market h1{
+  vertical-align: middle;
+  line-height: 120px;
+    font-weight: 500;
+    font-size: 40px;
+    padding-left: 90px;
+    padding-right: 90px;
+    margin: 0;
+}
+.price{
+  margin-bottom: 0;
+}
+.container{
+  width: 100%;
+}
+.container h2{
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.container h3, .container p {
+  padding-left: 70px;
+  padding-right: 70px;
+
+}
+.container ul{
+margin-left: 70px;
+margin-right: 70px;
+
+}
+.chart{
+  margin: 30px 75px 0 75px;
+}
+.container h3{
+font-size: 26px;
+margin-bottom: 10px;
+}
+.container p , .container ul {
+  color: #6A6666;
+  font-size: 17px;
+}
+.line hr {
+  clear:both;
+  display:block;
+  width: 80%;
+  height: 1px;
+  border: 0;
+background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+margin: 30px auto 25px auto;
+}
+.black{
+  color: #000;
+}
+.chart-button{
+padding: 0 10px 0 10px;
+  height: 60px;
+  line-height: 55px;
+  font-size: 15px;
+}
+.checkout_form{
+  display: inline-block;
+  margin-bottom: 20px;
+  position: relative;
+  top: 1px;
+}
+.buy-button{
+  background-color: #1652F0;
+border: 0;
+color: #fff;
+padding: 0 10px 0 10px;
+font-size: 15px;
+display: table;
+line-height: 60px;
+}
+.buy-button:hover{
+  background-color: #3E69D6;
+
+}
+.a-tag-viewmore{
+margin-left: 20px;
+}
+.download-xls{
+  padding: 0 10px 0 10px;
+
+  height: 60px;
+  line-height: 58px;
+  font-size: 15px;
+  border: 0;
+}
+.more-charts{
+  display: inline-block;
+  background-color: #fff;
+
+  color: #1652F0;
+  border: solid 2px #1652F0;
+}
+.more-charts:hover{
+
+
+  background-color: #e6e6e6;
+  color: #3E69D6;
+  border: solid 2px #3E69D6;
+}
+.group-buttons{
+  width: fit-content;
+  display: table;
+  margin :100px auto 30px auto;
+}
+/*     ads */
+.side-content{
+  text-align: center;
+  margin-top: 20px;
+  padding-left: 0 !important ;
+  padding-right: 0 !important;
+}
+
+/*loading*/
+.row{
+  position: relative;
+}
+.loading{
+  height: 150px;
+  width: 310px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.loading h3{
+  font-weight: 600;
+}
+.loading h4{
+  color: #6A6666;
+}
+.loading img{
+  height: 100px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: loading 1s linear infinite;
+}
+@keyframes loading {
+  to{
+    transform: rotate(1turn);
+  }
+}
+
+/* dark mode market cap*/
+.darkmode .header-market{
+  background-color: #212430;
+  transition: background-color 0.6s ease, color 1s ease;
+}
+.darkmode .container h3 , .darkmode .header-market h1{
+    color: #fff;
+
+  transition: background-color 0.6s ease, color 1s ease;
+}
+.darkmode .container p , .darkmode .container ul {
+  color: #E2E1E1;
+    transition: background-color 0.6s ease, color 1s ease;
+
+}
+.darkmode .line hr {
+background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255,255,255,1), rgba(0, 0, 0, 0));
+}
+.darkmode .black{
+  color: #fff;
+  font-size: 18px;
+}
+.darkmode .more-charts{
+
+  background-color: #171717;
+  color: #1652F0;
+  border: solid 2px #1652F0;
+
+
+}
+.darkmode .more-charts:hover{
+  background-color: #1f1f1f;
+}
+
+/*highsharts darkmode*/
+.darkmode .highcharts-background, .darkmode g rect, .darkmode .highcharts-label-box  {
+	fill: #1f1f1f;
+}
+.darkmode text, .darkmode tspan , .darkmode .highcharts-title {
+  fill:  #fff !important;
+}
+.darkmode .highcharts-navigator-mask-inside{
+  fill : rgba(102,133,194,0.2);
+}
+.darkmode .highcharts-plot-band {
+  fill : rgba(255, 0, 0, 0.0);
+}
+
+.darkmode .highcharts-navigator-mask-outside{
+  fill :rgb(255,255,255,0.0);
+}
+/*loading dark*/
+
+.darkmode .loading h4{
+  color: #E2E1E1;
+}
+
+/** tablet market cap gdp */
+@media only screen and (max-width: 850px){
+  .header-market{
+    height: auto;
+  }
+  .header-market h1{
+      font-size: 30px;
+      padding-left: 28px;
+      padding-right: 28px;
+      margin: 0;
+  }
+  .container h2{
+    padding-left: 13px;
+    padding-right: 13px;
+
+  }
+
+  .container h3,.container p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .container ul{
+  margin-left: 2em;
+  padding-left: 1em;
+  }
+  .chart{
+margin-left: 13px;
+margin-right: 13px;
+text-align: center;
+  }
+
+}
+@media only screen and (max-width: 990px){
+  .ad{
+    width: 100%;
+
+  }
+  .ad p{
+    width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px!important;
+
+  }
+}
+
+
+/* Ipad pro */
+@media only screen and (max-width: 1024px){
+  .navbar-brand , .news {
+    left: 1.4em;
+  }
+  .navbar-header span{
+    margin-right: 10px;
+  }
+  .header-market h1{
+      padding-left: 28px;
+      padding-right: 28px;
+
+  }
+  .container h2{
+    padding-left: 13px;
+    padding-right: 13px;
+
+  }
+  .container h3,.container p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .container ul{
+  margin-left: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+
+  }
+  .chart{
+margin-left: 13px;
+margin-right: 13px;
+text-align: center;
+  }
+  .sec1{
+    padding-left: 0;
+  }
+  .icons{
+    margin-left: 1.7em;
+  }
+}
+
+
+
+
+
+
+
+
+
+/** phone market cap gdp */
+@media only screen and (max-width: 550px){
+.header-market{
+  min-height: 90px;
+margin-bottom: 1em;
+
+}
+.header-market h1{
+  vertical-align: middle;
+  line-height: 90px;
+    font-size: 5vw;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0;
+
+}
+
+.container h2{
+  font-size: 5vw;
+  padding-left: 0.3em;
+  padding-bottom: 1em;
+}
+.container h3{
+  font-size: 5vw;
+}
+.container p {
+  font-size: 4vw;
+}
+.container h3,.container p {
+  padding-left: 0;
+  padding-right: 0;
+}
+.container ul{
+    font-size: 4vw;
+margin-left: 1.5em;
+padding-left: 1em;
+}
+.chart{
+  width: 100%;
+  margin :0;
+}
+.group-buttons{
+  width: 100%;
+  display: block;
+}
+.download-xls{
+  width: 80%;
+display: block;
+margin :0 auto 20px auto;
+
+}
+.a-tag-viewmore{
+  display: block;
+margin-left: 0;
+}
+.checkout_form{
+  width: 100%;
+}
+
+.buy-button{
+  width: 80%;
+display: block;
+margin: 0 auto 0 auto;
+}
+.more-charts{
+  width: 80%;
+display: block;
+margin: 0 auto 0 auto;
+
+}
+.more-charts:hover{
+  background-color: #f6f6f6;
+  color: #3E69D6;
+  border: solid 2px #3E69D6;
+}
+.loading{
+  text-align: center;
+}
+.ad{
+  width: 100%;
+}
+}
+
+
+
+
+/******************************************** other changes ************************************************************************/
+
+
+/*error message */
+#error_staff{
+  width : 35%;
+  margin: auto;
+  display: inline-block;
+  position: relative;
+  top:7em;
+  display: none;
+}
+#error_msg{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+#error_txt p{
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
+
+/* incompatible browser */
+.modal-title{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 45px;
+  margin-top: 20px;
+}
+.modal-para{
+  width: 90%;
+  text-align: center;
+  margin: 0 auto 0 auto;
+  font-size: 18px;
+  color: #6A6666;
+}
+.modal-btn{
+  font-size: 19px;
+  border-radius: 5px;
+}
+
+.mod-close{
+  display: block;
+  margin : 35px auto 25px auto;
+  width: 120px;
+  height: 50px;
+
+}
+
+
+
+/* navbar spacing*/
+.payment-success , .content , .header-market{
+  margin-top: 50px;
+}
+
+
+/* data Unavailable*/
+.modal-buttons{
+  display:table;
+margin: 30px auto 30px auto;
+
+}
+.modal-charts{
+  width: 180px;
+  height : 60px;
+  line-height: 60px;
+  display: inline-block;
+  margin-right: 20px;
+}
+.modal-close{
+  font-size: 16px;
+  width: 100px;
+  height : 60px;
+  line-height: 50px;
+}
+/* data Unavailable dark mode*/
+.darkmode .modal-content{
+  background-color: #171717;
+}
+.darkmode .modal-title{
+  color: #fff;
+}
+.darkmode .modal-para{
+  color: #E2E1E1;
+}
+/* data Unavailable phone*/
+@media only screen and (max-width: 500px){
+.modal-charts{
+width: 80%;
+display: block;
+margin: 10px auto 10px auto;
+}
+.modal-close{
+  width: 80%;
+  display: block;
+  margin: 10px auto 10px auto;
+}
+.modal-buttons{
+width: 100%;
+}
+
+/*incompatible browser phone */
+.mod-close{
+  width: 80%;
+}
+
+}
+
+
+/* center the cards**/
+
+@media only screen and (min-width: 1200px){
+.card-cont{
+  text-align: center;
+  height: 100%;
+}
+.card{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+}
+
+@media only screen and (max-width: 1200px){
+  .body{
+    overflow: hidden;
+  }
+  .card{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/***************************** In the news ****************************************/
+.news-section{
+  max-width: 1500px;
+}
+
+.news-img{
+  margin-left: 80px;
+
+  max-width: 550px;
+  height: auto;
+}
+.news-button{
+  width: 120px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+
+
+  /*ipad pro */
+  @media only screen and (max-width: 1024px){
+    .news-img{
+      margin-left: 16px;
+    }
+  }
+  @media only screen and (max-width: 1000px){
+  .news-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  }
+  @media only screen and (max-width: 550px){
+    .news-img{
+  max-width: 90%;
+    }
+  }
+
+
+/***** payment **** */
+.alert{
+  width: 100%;
+  margin-bottom: 0;
+}
+.payment-success{
+  padding: 0;
+margin-bottom: -50px;
+}
+
+
+/* 404 page*/
+.error-img{
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+
+}
+
+@media only screen and (max-width: 770px){
+  .error-img{
+    max-width: 95%;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) and (min-width : 551px){
+  .navbar-brand{
+    margin-left: -15px !important;
+  }
+}
+
+@media only screen and (max-width: 550px){
+  .error-img{
+    margin-bottom: 3em;
+  }
+  .market-cap h1{
+    font-size: 4.8vw ;
+  }
+  .relative-strength h1{
+    font-size: 4.6vw ;
+  }
+}
+
+
+/* modal ..............*/
+.modal-form{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-dialog{
+  width: 800px;
+  margin-top: 200px;
+    border-radius: 10px;
+}
+.modal-content{
+  background-color: #f6f6f6;
+  height: 390px;
+
+}
+
+.close{
+  height: 15px;
+  width: 15px;
+  float: right;
+}
+
+.news-image{
+  margin-left: 0;
+  width: 350px;
+}
+.newsletter-img{
+  display: table-cell;
+}
+.news-content{
+  display: table-cell;
+  text-align: center;
+width: 350px;
+}
+.news-content h3{
+  position: relative;
+  bottom:  100px;
+font-size: 25px;
+  padding-bottom: 30px;
+font-weight: bold;
+}
+
+.news-content p{
+  color: #777676;
+  font-size: 17px;
+  position: relative;
+  bottom:  100px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+.news-content input{
+  position: relative;
+  bottom:  80px;
+height: 50px;
+margin-left: auto;
+margin-right: auto;
+width: 300px;
+display: block;
+}
+
+.news-content button {
+  border: 0;
+  line-height: 50px;
+  position: relative;
+  bottom:  100px;
+  height: 50px;
+}
+.news-content .active {
+  background-color: #1652F0!important;
+  color: #E1E1E1!important;
+}
+
+
+.close-modal{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  padding: 3px;
+}
+#verify-msg-modal{
+  position: absolute;
+  bottom: 110px;
+  width: 45%;
+}
+
+
+/*tablette newsletter*/
+@media only screen and (max-width: 1000px){
+  body{
+    padding-right: 0;
+  }
+  .close-modal{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+  }
+}
+@media only screen and (max-width: 800px){
+  .modal{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .news-image{
+    margin-left: auto;
+        width: 180px;
+        margin-right: auto;
+        display: block;
+
+  }
+  .newsletter-img{
+  width: 800px;
+  }
+  .modal-dialog{
+    width: 95%;
+
+  }
+  .news-content {
+    width: 100%;
+    position: absolute;
+  top: 150px;
+
+  }
+  .news-content h3{
+    margin-top: 120px;
+    padding-bottom: 10px;
+  }
+  .modal-dialog{
+    margin-top: 150px;
+  }
+  .modal-content{
+  height: 450px;
+  }
+
+
+
+
+    .news-content input{
+      width: 50%;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 25px;
+    }
+
+    .news-content button {
+      margin-top: 40px;
+      width: 120px;
+    }
+
+
+    .close-modal{
+  position: fixed;
+    }
+  .news-content p{
+    width: 60%;
+  }
+  #verify-msg-modal{
+    position: absolute;
+      bottom: 125px;
+      left: 25%;
+      right: 25%;
+    width: 50%;
+}
+}
+
+/*mobile newsletter*/
+@media only screen and (max-width: 600px){
+.modal{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.news-image{
+  margin-left: auto;
+      width: 180px;
+      margin-right: auto;
+      display: block;
+
+}
+.newsletter-img{
+width: 800px;
+}
+.modal-dialog{
+  width: 95%;
+
+}
+.news-content {
+  width: 100%;
+  position: absolute;
+top: 150px;
+
+}
+.news-content h3{
+  margin-top: 120px;
+}
+.modal-dialog{
+
+    position: fixed;
+    bottom: 50px;
+right: 0;
+
+}
+.modal-content{
+height: 450px;
+}
+
+.news-content p{
+  width: 90%;
+}
+
+
+  .news-content input{
+    width: 85%;
+text-align: center;
+padding: 0;
+  }
+
+  .news-content button {
+    margin-top: 40px;
+    width: 85%;
+  }
+
+
+  .news-content span{
+position: fixed;
+  }
+
+  #verify-msg-modal{
+    bottom: 140px;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+}
+/*fix the font-size for mobile version */
+@media only screen and (max-width: 400px){
+  .news-content h3{
+    font-size:6vw;
+}
+.news-content p{
+    font-size:4vw;
+
+}
+.news-content input{
+  font-size:4vw;
+  }
+.news-content button {
+  font-size:4vw;
+  }
+  #verify-msg-modal{
+    font-size: 3vw;
+}
+
+}
+/* darkmode modal */
+.darkmode .news-content h3{
+color:#fff;
+}
+
+.darkmode .news-content p{
+color: #ECECEC;
+}
+
+.darkmode .close-modal{
+background-color: #222531 ;
+}
+.darkmode .news-content input{
+  color: #fff;
+  background-color: rgb(34, 37, 49);
+  border: 1px solid rgb(64, 66, 78);
+}
+.unavailable-modal{
+height: auto;
+}
