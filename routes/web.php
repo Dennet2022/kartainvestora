@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('post.index');
+Route::get('/c/{category}', [\App\Http\Controllers\PostController::class, 'postsWithCategory'])->name('postsWithCategory');
+//------
 
 Route::get('/longtermtrends-in-the-news', function () {
     return view('longtermtrends-in-the-news');
@@ -29,26 +29,10 @@ Route::get('/newsletter', function () {
     return view('newsletter');
 });
 
-//
-
-Route::get('/sp500-price-earnings-shiller-pe-ratio/', function () {
-    return view('sp500-price-earnings-shiller-pe-ratio');
-});
-
-Route::get('/market-cap-to-gdp-the-buffett-indicator', function () {
-    return view('market-cap-to-gdp-the-buffett-indicator');
-});
-
-Route::get('/stocks-vs-gold-comparison', function () {
-    return view('stocks-vs-gold-comparison');
-});
+//-----
 
 Route::get('/stocks-vs-bonds', function () {
     return view('stocks-vs-bonds');
-});
-
-Route::get('/stocks-to-real-estate-ratio', function () {
-    return view('stocks-to-real-estate-ratio');
 });
 
 Route::get('/dow-gold-ratio', function () {
@@ -158,3 +142,5 @@ Route::get('/home-price-vs-inflation', function () {
 Route::get('/home-price-vs-inflation', function () {
     return view('home-price-vs-inflation');
 });
+
+Route::get('/{slug}', [\App\Http\Controllers\PostController::class, 'post'])->name('post');

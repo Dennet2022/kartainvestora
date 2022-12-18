@@ -206,107 +206,107 @@ to make these charts available online.">
     //Filter active button
 
 
-    $('.filter-btn').on('click', function () {
-        //remove class
-        $("span").removeClass("active");
-        // add class to the one we clicked
-        $(this).addClass("active");
-        var filterTxt = $(this).text().toLowerCase();
-        var stocksFilter = ['large-cap', 'dow jones', 's&p 500', 'market cap', 'stock market', 'stocks', 'emerging'];
-        var realestateFilter = ['home', 'real estate', 'Mortgage'];
-        var bondsFilter = ['bond', 'treasury', 'interest rate', 'debt', 'm2', 'copper to gold', 'yield'];
-        var commoditiesFilter = ['commodities'];
-        var cryptoFilter = ['bitcoin'];
-
-
-        // hide all;
-        $(".row:not(.not_select)").each(function () {
-            $(this).hide();
-            // hide top hr
-            $(this).prev().hide();
-        });
-
-        if (filterTxt == 'all') {
-            $(".row:not(.not_select)").each(function () {
-                $(this).show();
-                $(this).prev().show();
-            });
-        } else if (filterTxt == 'real estate') {
-            // show rows where we can find input text
-            $(".row:not(.not_select)").each(function () {
-                var div = $(this);
-                var div_text = $(this).text().toLowerCase();
-                $(realestateFilter).each(function () {
-                    var realestateFilter = this.toLowerCase();
-                    if (div_text.indexOf(realestateFilter) != -1) {
-                        div.show();
-                        div.prev().show();
-                    }
-                });
-            });
-        } else if (filterTxt == 'stocks') {
-            // show rows where we can find input text
-            $(".row:not(.not_select)").each(function () {
-                var div = $(this);
-                var div_text = $(this).text().toLowerCase();
-                $(stocksFilter).each(function () {
-                    var stocksFilter = this.toLowerCase();
-                    if (div_text.indexOf(stocksFilter) != -1) {
-                        div.show();
-                        div.prev().show();
-                    }
-                });
-            });
-        } else if (filterTxt == 'bonds') {
-            // show rows where we can find input text
-            $(".row:not(.not_select)").each(function () {
-                var div = $(this);
-                var div_text = $(this).text().toLowerCase();
-                $(bondsFilter).each(function () {
-                    var bondsFilter = this.toLowerCase();
-                    if (div_text.indexOf(bondsFilter) != -1) {
-                        div.show();
-                        div.prev().show();
-                    }
-                });
-            });
-        } else if (filterTxt == 'commodities') {
-            // show rows where we can find input text
-            $(".row:not(.not_select)").each(function () {
-                var div = $(this);
-                var div_text = $(this).text().toLowerCase();
-                $(commoditiesFilter).each(function () {
-                    var bondsFilter = this.toLowerCase();
-                    if (div_text.indexOf(bondsFilter) != -1) {
-                        div.show();
-                        div.prev().show();
-                    }
-                });
-            });
-        } else if (filterTxt == 'crypto') {
-            // show rows where we can find input text
-            $(".row:not(.not_select)").each(function () {
-                var div = $(this);
-                var div_text = $(this).text().toLowerCase();
-                $(cryptoFilter).each(function () {
-                    var bondsFilter = this.toLowerCase();
-                    if (div_text.indexOf(bondsFilter) != -1) {
-                        div.show();
-                        div.prev().show();
-                    }
-                });
-            });
-        } else {
-            // show rows where we can find input text
-            $(".row:not(.not_select)").each(function () {
-                var div_text = $(this).text().toLowerCase();
-                if (div_text.indexOf(filterTxt) != -1) {
-                    $(this).show();
-                    $(this).prev().show();
-                }
-            });
-        }
-    });
+    // $('.filter-btn').on('click', function () {
+    //     //remove class
+    //     $("span").removeClass("active");
+    //     // add class to the one we clicked
+    //     $(this).addClass("active");
+    //     var filterTxt = $(this).text().toLowerCase();
+    //     var stocksFilter = ['large-cap', 'dow jones', 's&p 500', 'market cap', 'stock market', 'stocks', 'emerging'];
+    //     var realestateFilter = ['home', 'real estate', 'Mortgage'];
+    //     var bondsFilter = ['bond', 'treasury', 'interest rate', 'debt', 'm2', 'copper to gold', 'yield'];
+    //     var commoditiesFilter = ['commodities'];
+    //     var cryptoFilter = ['bitcoin'];
+    //
+    //
+    //     // hide all;
+    //     $(".row:not(.not_select)").each(function () {
+    //         $(this).hide();
+    //         // hide top hr
+    //         $(this).prev().hide();
+    //     });
+    //
+    //     if (filterTxt == 'all') {
+    //         $(".row:not(.not_select)").each(function () {
+    //             $(this).show();
+    //             $(this).prev().show();
+    //         });
+    //     } else if (filterTxt == 'real estate') {
+    //         // show rows where we can find input text
+    //         $(".row:not(.not_select)").each(function () {
+    //             var div = $(this);
+    //             var div_text = $(this).text().toLowerCase();
+    //             $(realestateFilter).each(function () {
+    //                 var realestateFilter = this.toLowerCase();
+    //                 if (div_text.indexOf(realestateFilter) != -1) {
+    //                     div.show();
+    //                     div.prev().show();
+    //                 }
+    //             });
+    //         });
+    //     } else if (filterTxt == 'stocks') {
+    //         // show rows where we can find input text
+    //         $(".row:not(.not_select)").each(function () {
+    //             var div = $(this);
+    //             var div_text = $(this).text().toLowerCase();
+    //             $(stocksFilter).each(function () {
+    //                 var stocksFilter = this.toLowerCase();
+    //                 if (div_text.indexOf(stocksFilter) != -1) {
+    //                     div.show();
+    //                     div.prev().show();
+    //                 }
+    //             });
+    //         });
+    //     } else if (filterTxt == 'bonds') {
+    //         // show rows where we can find input text
+    //         $(".row:not(.not_select)").each(function () {
+    //             var div = $(this);
+    //             var div_text = $(this).text().toLowerCase();
+    //             $(bondsFilter).each(function () {
+    //                 var bondsFilter = this.toLowerCase();
+    //                 if (div_text.indexOf(bondsFilter) != -1) {
+    //                     div.show();
+    //                     div.prev().show();
+    //                 }
+    //             });
+    //         });
+    //     } else if (filterTxt == 'commodities') {
+    //         // show rows where we can find input text
+    //         $(".row:not(.not_select)").each(function () {
+    //             var div = $(this);
+    //             var div_text = $(this).text().toLowerCase();
+    //             $(commoditiesFilter).each(function () {
+    //                 var bondsFilter = this.toLowerCase();
+    //                 if (div_text.indexOf(bondsFilter) != -1) {
+    //                     div.show();
+    //                     div.prev().show();
+    //                 }
+    //             });
+    //         });
+    //     } else if (filterTxt == 'crypto') {
+    //         // show rows where we can find input text
+    //         $(".row:not(.not_select)").each(function () {
+    //             var div = $(this);
+    //             var div_text = $(this).text().toLowerCase();
+    //             $(cryptoFilter).each(function () {
+    //                 var bondsFilter = this.toLowerCase();
+    //                 if (div_text.indexOf(bondsFilter) != -1) {
+    //                     div.show();
+    //                     div.prev().show();
+    //                 }
+    //             });
+    //         });
+    //     } else {
+    //         // show rows where we can find input text
+    //         $(".row:not(.not_select)").each(function () {
+    //             var div_text = $(this).text().toLowerCase();
+    //             if (div_text.indexOf(filterTxt) != -1) {
+    //                 $(this).show();
+    //                 $(this).prev().show();
+    //             }
+    //         });
+    //     }
+    // });
 </script>
 <script>
     if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
