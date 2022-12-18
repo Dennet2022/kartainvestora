@@ -19,9 +19,9 @@ class PostFactory extends Factory
         return [
             'category_id' => $this->faker->numberBetween(1, 6),
             'slug' => $this->faker->slug(),
-            'title' => $this->faker->text(100),
+            'title' => $this->faker->text(20),
             'description' => $this->faker->text(),
-            'content' => $this->faker->randomHtml(),
+            'content' => '<div class="container"><div class="row"><div class="col-lg-12">' .  $this->faker->paragraph(20) . '</div></div></div>',
             'image' => $this->faker->imageUrl(),
         ];
     }

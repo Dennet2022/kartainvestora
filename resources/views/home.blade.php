@@ -58,7 +58,7 @@
                 <div class="card-body">
                     <p class="card-text">{!! $post->description !!}</p>
 
-                    <a href="{{ $post->slug }}" class="card-btn">
+                    <a href="{{ url($post->slug) }}" class="card-btn">
                         <div class="button ">
                             View chart
                         </div>
