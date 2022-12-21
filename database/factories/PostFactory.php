@@ -21,7 +21,7 @@ class PostFactory extends Factory
             'slug' => $this->faker->slug(),
             'title' => $this->faker->text(20),
             'description' => $this->faker->text(),
-            'content' => '<div class="container"><div class="row"><div class="col-lg-12">' .  $this->faker->paragraph(20) . '</div></div></div>',
+            'content' => $this->faker->paragraph(20),
             'image' => $this->faker->imageUrl(),
         ];
     }
