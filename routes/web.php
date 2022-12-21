@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('post.index');
 Route::get('/c/{category}', [\App\Http\Controllers\PostController::class, 'postsWithCategory'])->name('postsWithCategory');
 //------
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.pages.main');
+    })->name('admin.main');
+    Route::resource('posts', \App\Http\Controllers\Admin\PostController::class)
+        ->only(['index', 'create', 'store', 'update', 'edit', 'destroy'])->names([
+        'index' => 'admin.posts.index',
+        'create' => 'admin.posts.create',
+        'store' => 'admin.posts.store',
+        'update' => 'admin.posts.update',
+        'edit' => 'admin.posts.edit',
+        'destroy' => 'admin.posts.destroy'
+    ]);
+    Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class)
+        ->only(['index', 'store', 'update', 'edit', 'destroy'])->names([
+        'index' => 'admin.categories.index',
+        'store' => 'admin.categories.store',
+        'update' => 'admin.categories.update',
+        'edit' => 'admin.categories.edit',
+        'destroy' => 'admin.categories.destroy'
+    ]);
+});
 
 Route::get('/longtermtrends-in-the-news', function () {
     return view('longtermtrends-in-the-news');
@@ -30,7 +53,6 @@ Route::get('/newsletter', function () {
 });
 
 //-----
-
 Route::get('/stocks-vs-bonds', function () {
     return view('stocks-vs-bonds');
 });
@@ -143,4 +165,10 @@ Route::get('/home-price-vs-inflation', function () {
     return view('home-price-vs-inflation');
 });
 
+Auth::routes();
+
+Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/{slug}', [\App\Http\Controllers\PostController::class, 'post'])->name('post');
+
+
