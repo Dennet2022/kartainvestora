@@ -9,9 +9,7 @@
         <div class="header">
             <div class="title">
                 <h2>Найдите самые интересные финансовые графики!</h2>
-                <p>Our mission is to find the most interesting and educational charts with rich historical data, and to make
-                    these
-                    charts available online.</p>
+                <p>Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные диаграммы с богатыми историческими данными и сделать эти диаграммы доступными в Интернете.</p>
             </div>
             <form class="mail" id="form">
                 <input placeholder="Get a monthly chart update" id="email-subscribe-input" onkeydown="validation()"
