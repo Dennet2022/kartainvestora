@@ -8,7 +8,7 @@
         <!-- HEADER -->
         <div class="header">
             <div class="title">
-                <h2>Find the most interesting financial charts!</h2>
+                <h2>Найдите самые интересные финансовые графики!</h2>
                 <p>Our mission is to find the most interesting and educational charts with rich historical data, and to make
                     these
                     charts available online.</p>
