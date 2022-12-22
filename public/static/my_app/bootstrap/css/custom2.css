@@ -1726,3 +1726,6 @@ background-color: #222531 ;
 .unavailable-modal{
 height: auto;
 }
+.category {
+    line-height: 2.5;
+}

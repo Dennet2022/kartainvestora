@@ -36,13 +36,10 @@
 
 
     <div class="text-center filter">
-        <a href="/"><span class="all {{ !isset($category) ? 'active' : ''}} filter-btn">All</span></a>
-        <a href="/c/gold"><span class="gold {{ isset($category) ? ($category === 'gold' ? 'active' : '') : ''}} filter-btn">Gold</span></a>
-        <a href="/c/stocks"><span class="stocks {{ isset($category) ? ($category === 'stocks' ? 'active' : '') : ''}} filter-btn">Stocks</span></a>
-        <a href="/c/bonds"><span class="bonds {{ isset($category) ? ($category === 'bonds' ? 'active' : '') : ''}} filter-btn">Bonds</span></a>
-        <a href="/c/real-estate"><span class="real {{ isset($category) ? ($category === 'real-estate' ? 'active' : '') : ''}} filter-btn">Real Estate</span></a>
-        <a href="/c/commodities"><span class="real {{ isset($category) ? ($category === 'commodities' ? 'active' : '') : ''}} filter-btn">Commodities</span></a>
-        <a href="/c/crypto"><span class="crypto {{ isset($category) ? ($category === 'crypto' ? 'active' : '') : ''}} filter-btn">Crypto</span></a>
+        <a href="/"><span class="all {{ !isset($categorySlag) ? 'active' : ''}} filter-btn">All</span></a>
+        @foreach($categories as $category)
+            <a class="category" href="/c/{{ $category->slug }}"><span class="{{ $category->slug }} {{ isset($categorySlag) ? ($categorySlag === $category->slug ? 'active' : '') : ''}} filter-btn">{{ $category->name }}</span></a>
+        @endforeach
     </div>
 
     <div class="row card-cont">
@@ -51,13 +48,12 @@
 
             <div class="card  row">
                 <h5 class="card-title">{{ $post->title }}</h5>
-                <a href="sp500-price-earnings-shiller-pe-ratio/">
+                <a href="{{ url($post->slug) }}/">
                     <img class="card-img rounded img-fluid " src="{{ $post->image }}"
-                         alt="S&P 500 Price to Earnings Ratio">
+                         alt="{{ $post->title }}">
                 </a>
                 <div class="card-body">
                     <p class="card-text">{!! $post->description !!}</p>
-
                     <a href="{{ url($post->slug) }}" class="card-btn">
                         <div class="button ">
                             View chart
