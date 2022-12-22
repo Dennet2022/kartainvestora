@@ -43,7 +43,7 @@
 
     <div class="footer-resp">
         <div class="long-resp">
-            <a class="navbar-brand" href="/">Longtermtrends</a>
+            <a class="navbar-brand" href="/">Kartainvestora</a>
         </div>
         <a href="https://www.paypal.com/donate?hosted_button_id=AFGGR9ZCPBDMC" class="fit">
             <div class="donate-resp button">
