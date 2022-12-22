@@ -14,7 +14,7 @@
             <form class="mail" id="form">
                 <input placeholder="Получать ежемесячное обновление" id="email-subscribe-input" onkeydown="validation()"
                        class="">
-                <div id="email-subscribe-submit" class="sub button">Subscribe</div>
+                <div id="email-subscribe-submit" class="sub button">Подписаться</div>
                 <span class="" id="verify-msg" style="display:none;"></span>
             </form>
             <div class="images">
