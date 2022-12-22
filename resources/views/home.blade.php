@@ -12,7 +12,7 @@
                 <p>Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные диаграммы с богатыми историческими данными и сделать эти диаграммы доступными в Интернете.</p>
             </div>
             <form class="mail" id="form">
-                <input placeholder="Get a monthly chart update" id="email-subscribe-input" onkeydown="validation()"
+                <input placeholder="Получайте ежемесячное обновление графиков" id="email-subscribe-input" onkeydown="validation()"
                        class="">
                 <div id="email-subscribe-submit" class="sub button">Subscribe</div>
                 <span class="" id="verify-msg" style="display:none;"></span>
