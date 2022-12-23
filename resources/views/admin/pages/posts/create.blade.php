@@ -61,9 +61,20 @@
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">Image</label>
-                                    <input name="image" class="form-control" type="file">
+                                    <input name="image" class="form-control" type="file" accept="image/*">
                                 </div>
-                                <textarea name="content" id="tiny"></textarea>
+                                <div class="col-12">
+                                    <label class="form-label">Image Graph</label>
+                                    <input name="image_graph" class="form-control" type="file" accept="image/*"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Graph</label>
+                                    <textarea name="graph" class="form-control" placeholder="Graph" rows="4" cols="4"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Content</label>
+                                    <textarea name="content" id="tiny"></textarea>
+                                </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary px-4">Submit</button>
                                 </div>

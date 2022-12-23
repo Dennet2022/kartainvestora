@@ -31,16 +31,27 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $uuid = Uuid::uuid4()->toString();
-        $filename = $uuid . '.jpg';
         $path = storage_path() . '/app/public/images/';
         if (!file_exists($path)) {
             mkdir($path, 0777, true);
         }
+
+        $uuid = Uuid::uuid4()->toString();
+        $filename = $uuid . '.jpg';
+
         $fileData = $request->hasFile('image') && $request->file('image')->isValid() ? $request->file('image') : $request->get('image');
         if($fileData) {
             $image = \Intervention\Image\Facades\Image::make($fileData);
             $image->save($path . $filename);
+        }
+
+        $uuid = Uuid::uuid4()->toString();
+        $filenameGraph = $uuid . '.jpg';
+
+        $fileDataGraph = $request->hasFile('image_graph') && $request->file('image_graph')->isValid() ? $request->file('image_graph') : $request->get('image_graph');
+        if($fileDataGraph) {
+            $image = \Intervention\Image\Facades\Image::make($fileDataGraph);
+            $image->save($path . $filenameGraph);
         }
 
         Post::create(
@@ -51,6 +62,8 @@ class PostController extends Controller
                 'description' => $request->description,
                 'content' => $request['content'],
                 'image' => $fileData ? 'storage/images/' . $filename : '',
+                'image_graph' => $fileDataGraph ? 'storage/images/' . $filenameGraph : '',
+                'graph' => $request->graph,
             ]
         );
 
@@ -72,13 +85,25 @@ class PostController extends Controller
     public function update(Request $request)
     {
         $postId = $request->post;
+
+        $path = storage_path() . '/app/public/images/';
+
         $uuid = Uuid::uuid4()->toString();
         $filename = $uuid . '.jpg';
-        $path = storage_path() . '/app/public/images/';
+
         $fileData = $request->hasFile('image') && $request->file('image')->isValid() ? $request->file('image') : $request->get('image');
         if($fileData) {
             $image = \Intervention\Image\Facades\Image::make($fileData);
             $image->save($path . $filename);
+        }
+
+        $uuid = Uuid::uuid4()->toString();
+        $filenameGraph = $uuid . '.jpg';
+
+        $fileDataGraph = $request->hasFile('image_graph') && $request->file('image_graph')->isValid() ? $request->file('image_graph') : $request->get('image_graph');
+        if($fileDataGraph) {
+            $image = \Intervention\Image\Facades\Image::make($fileDataGraph);
+            $image->save($path . $filenameGraph);
         }
 
         $post = Post::find($postId);
@@ -89,6 +114,7 @@ class PostController extends Controller
                 'title' => $request->title,
                 'description' => $request->description,
                 'content' => $request['content'],
+                'graph' => $request->graph,
             ]
         );
 
@@ -96,6 +122,14 @@ class PostController extends Controller
             $post->update(
                 [
                     'image' => 'storage/images/' . $filename,
+                ]
+            );
+        }
+
+        if($fileDataGraph) {
+            $post->update(
+                [
+                    'image_graph' => 'storage/images/' . $filenameGraph
                 ]
             );
         }
