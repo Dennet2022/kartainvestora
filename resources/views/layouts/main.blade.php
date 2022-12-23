@@ -36,7 +36,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/static/my_app/images/touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/static/my_app/images/touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="144x144" href="/static/my_app/images/touch-icon-144x144.png">
-    <title>Longtermtrends | Find the most interesting financial charts!</title>
+    <title>Kartainvestora | Найдите самые интересные финансовые графики!</title>
     <meta name="description" content="Our mission is to find the most interesting and educational charts with rich historical data, and
 to make these charts available online.">
 
