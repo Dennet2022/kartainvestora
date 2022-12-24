@@ -9,7 +9,7 @@
 
     <div class="container">
 
-        @if(isset($post->image_graph))
+        @if(!empty($post->image_graph))
             <div class="row">
                 <div class="col-md-12" style="display: flex; justify-content: center; margin: 20px 0;">
                     <img src="{{ $post->image_graph }}" alt="{{ $post->title }}" style="width: 70%;">
