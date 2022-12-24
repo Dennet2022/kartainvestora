@@ -118,20 +118,36 @@ class PostController extends Controller
             ]
         );
 
-        if($fileData) {
+        if ($request->deleteImage == 1) {
             $post->update(
                 [
-                    'image' => 'storage/images/' . $filename,
+                    'image' => '',
                 ]
             );
+        } else {
+            if ($fileData) {
+                $post->update(
+                    [
+                        'image' => 'storage/images/' . $filename,
+                    ]
+                );
+            }
         }
 
-        if($fileDataGraph) {
+        if ($request->deleteImageGraph == 1) {
             $post->update(
                 [
-                    'image_graph' => 'storage/images/' . $filenameGraph
+                    'image_graph' => '',
                 ]
             );
+        } else {
+            if ($fileDataGraph) {
+                $post->update(
+                    [
+                        'image_graph' => 'storage/images/' . $filenameGraph
+                    ]
+                );
+            }
         }
 
         return redirect(url($post->slug));
