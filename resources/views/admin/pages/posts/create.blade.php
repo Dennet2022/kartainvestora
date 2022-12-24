@@ -60,16 +60,16 @@
                                     <input name="slug" type="text" class="form-control" placeholder="Slug">
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label">Image</label>
-                                    <input name="image" class="form-control" type="file" accept="image/*">
-                                </div>
-                                <div class="col-12">
                                     <label class="form-label">Image Graph</label>
                                     <input name="image_graph" class="form-control" type="file" accept="image/*"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">Graph</label>
                                     <textarea name="graph" class="form-control" placeholder="Graph" rows="4" cols="4"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Image</label>
+                                    <input name="image" class="form-control" type="file" accept="image/*">
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">Content</label>

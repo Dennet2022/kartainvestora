@@ -61,16 +61,16 @@
                                     <input name="slug" type="text" class="form-control" placeholder="Slug" value="{{ $post->slug }}">
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label">Image OR delete image <input type="checkbox" name="deleteImage" value="1"></label>
-                                    <input name="image" class="form-control" type="file" accept="image/*">
-                                </div>
-                                <div class="col-12">
                                     <label class="form-label">Image Graph OR delete image <input type="checkbox" name="deleteImageGraph" value="1"></label>
                                     <input name="image_graph" class="form-control" type="file" accept="image/*"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">Graph</label>
                                     <textarea name="graph" class="form-control" placeholder="Graph" rows="4" cols="4">{{ $post->graph }}</textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Image OR delete image <input type="checkbox" name="deleteImage" value="1"></label>
+                                    <input name="image" class="form-control" type="file" accept="image/*">
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">Content</label>
