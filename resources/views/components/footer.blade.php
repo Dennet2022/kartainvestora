@@ -17,12 +17,12 @@
                 </a>
             </div>
         </div>
-        <div class="sec sec2">
+        <!--<div class="sec sec2">
 
             <a href="https://www.paypal.com/donate?hosted_button_id=AFGGR9ZCPBDMC" class="fit">
                 <div class="donate button">
                     Поддержать
-                </div>
+                </div>-->
             </a>
             <p class="bit">
                 <font class="black" style="font-size:18px;">Bitcoin Donations: </font> <br>bc1qvu8a9uy5p6lptdm3n3hyljer4s9ud2kfm4gv95
