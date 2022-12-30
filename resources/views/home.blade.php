@@ -22,7 +22,7 @@
                 <img src="/static/my_app/images/real-interest-rate.png" alt="The real interest" class="head-img img2">
 
             </div>
-            <div class="Видеть то, чего не замечают другие, — наша цель.">
+            <div class="featured" bis_skin_checked="1"> ==$0
                 <h5>Featured on: </h5>
                 <a href="https://www.ft.com/content/6536113f-f509-41e2-bee0-597ed90843b6" target="_blank" class="financial">
                     FINANCIAL TIMES</a>
