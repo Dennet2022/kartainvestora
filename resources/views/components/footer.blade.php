@@ -21,7 +21,7 @@
 
             <a href="https://www.paypal.com/donate?hosted_button_id=AFGGR9ZCPBDMC" class="fit">
                 <div class="donate button">
-                    Donate
+                    Поддержать
                 </div>
             </a>
             <p class="bit">
