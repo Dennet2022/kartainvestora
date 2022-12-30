@@ -9,7 +9,7 @@
         <div class="header">
             <div class="title">
                 <h2>Найдите самые интересные финансовые графики!</h2>
-                <p>Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные диаграммы с богатыми историческими данными и сделать эти диаграммы доступными в Интернете.</p>
+                <p>Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные диаграммы с богатыми историческими данными и сделать эти диаграммы доступными для вас.</p>
             </div>
             <form class="mail" id="form">
                 <input placeholder="Ежемесячное обновление" id="email-subscribe-input" onkeydown="validation()"
@@ -22,13 +22,13 @@
                 <img src="/static/my_app/images/real-interest-rate.png" alt="The real interest" class="head-img img2">
 
             </div>
-            <!--<div class="featured">
+            <div class="Видеть то, чего не замечают другие, — наша цель.">
                 <h5>Featured on: </h5>
                 <a href="https://www.ft.com/content/6536113f-f509-41e2-bee0-597ed90843b6" target="_blank" class="financial">
                     FINANCIAL TIMES</a>
                 <a href="https://www.nytimes.com/2020/04/30/opinion/economy-stock-market-coronavirus.html" target="_blank"
                    class="new-york">The New York Times</a>
-            </div>-->
+            </div>
         </div>
     </div>
 
