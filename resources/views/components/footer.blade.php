@@ -9,7 +9,7 @@
             <div class="icons">
 
 
-                <a <!--href="http://silvanfrank.com/"--> class="icon globe" target="_blank">
+                <a href="http://silvanfrank.com/" class="icon globe" target="_blank">
                     <img src="/static/my_app/images/globe.svg" alt="silvanfrank.com" id="globe">
                 </a>
                 <a href="https://twitter.com/silvan_frank" class="icon twitter" target="_blank">
