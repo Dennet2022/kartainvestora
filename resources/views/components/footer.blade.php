@@ -41,7 +41,7 @@
 
 
 
-    <div class="footer-resp">
+    <!--<div class="footer-resp">
         <div class="long-resp">
             <a class="navbar-brand" href="/">Kartainvestora</a>
         </div>
@@ -64,7 +64,7 @@
                 <img src="/static/my_app/images/twitter.svg" alt="Twitter" id="twitter-res">
             </a>
         </div>
-    </div>
+    </div>-->
 
     <div class="down">
         <p>Charts powered by Highcharts. All rights reserved.</p>
