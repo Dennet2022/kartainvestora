@@ -19,7 +19,7 @@
         </div>
         <div class="sec sec2">
 
-            <a href="https://www.paypal.com/donate?hosted_button_id=AFGGR9ZCPBDMC" class="fit">
+            <a href="http://kartainvestora.ru/" class="fit">
                 <div class="donate button">
                     Поддержать
                 </div>
