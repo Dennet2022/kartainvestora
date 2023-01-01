@@ -25,7 +25,7 @@
                 </div>
             </a>
             <p class="bit">
-                <font class="black" style="font-size:18px;">Bitcoin Donations: </font> <br>bc1qvu8a9uy5p6lptdm3n3hyljer4s9ud2kfm4gv95
+                <font class="black" style="font-size:18px;">Bitcoin Donations: </font> <br>1N3gGn5WrFDRqjBPKgxHjg9crcMUUuayAk
             </p>
 
         </div>
@@ -50,7 +50,7 @@
                 Поддержать
             </div>
         </a>
-        <p class="bit-resp">Bitcoin Donations: bc1qvu8a9uy5p6lptdm3n3hyljer4s9ud2kfm4gv95</p>
+        <p class="bit-resp">Bitcoin Donations: 1N3gGn5WrFDRqjBPKgxHjg9crcMUUuayAk</p>
         <a href="http://kartainvestora.ru/" class="news-resp footer-log">Новости</a>
         <a href="http://kartainvestora.ru/" class="terms footer-log">О Нас</a>
         <a href="http://kartainvestora.ru/" class="footer-log" target="_blank">Рассылка</a>
