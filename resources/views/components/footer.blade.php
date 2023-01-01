@@ -29,11 +29,11 @@
             </p>-->
 
         </div>
-        <!--<div class="sec sec3">
-            <a href="/longtermtrends-in-the-news/" class="footer-log news">In the news</a>
-            <a href="/terms-of-use/" class="terms footer-log">Terms of use</a>
-            <a href="/newsletter/" class="footer-log" target="_blank">Newsletter</a>
-        </div>-->
+        <div class="sec sec3">
+            <a href="http://kartainvestora.ru/" class="footer-log news">In the news</a>
+            <a href="http://kartainvestora.ru/" class="terms footer-log">Terms of use</a>
+            <a href="http://kartainvestora.ru/" class="footer-log" target="_blank">Newsletter</a>
+        </div>
     </div>
     <!-- FOOTER FOR PHONE -->
 
