@@ -8,8 +8,8 @@
         <!-- HEADER -->
         <div class="header">
             <div class="title">
-                <h2>Найдите самые интересные финансовые графики!</h2>
-                <p>Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные диаграммы с богатыми историческими данными и сделать эти диаграммы доступными для вас.</p>
+                <h2>Найдите самые интересные финансовые модели!</h2>
+                <p>Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные графики с богатыми историческими данными и сделать эти графики доступными для вас.</p>
             </div>
             <form class="mail" id="form">
                 <input placeholder="Ежемесячное обновление" id="email-subscribe-input" onkeydown="validation()"
@@ -25,7 +25,7 @@
             <div class="featured" bis_skin_checked="1">
                 <h5>Наша цель: </h5>
                 <a class="financial">
-                    Видеть то, чего не замечают другие</a>
+                    Видеть то, чего не замечают другие.</a>
                 <!--<a href="https://www.nytimes.com/2020/04/30/opinion/economy-stock-market-coronavirus.html" target="_blank"
                    class="new-york">The New York Times</a>-->
             </div>
