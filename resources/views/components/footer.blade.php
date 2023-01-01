@@ -41,32 +41,32 @@
 
 
 
-    <!--<div class="footer-resp">
+    <div class="footer-resp">
         <div class="long-resp">
             <a class="navbar-brand" href="/">Kartainvestora</a>
         </div>
-        <a href="https://www.paypal.com/donate?hosted_button_id=AFGGR9ZCPBDMC" class="fit">
+        <a href="http://kartainvestora.ru/" class="fit">
             <div class="donate-resp button">
                 Donate
             </div>
         </a>
         <p class="bit-resp">Bitcoin Donations: bc1qvu8a9uy5p6lptdm3n3hyljer4s9ud2kfm4gv95</p>
-        <a href="/longtermtrends-in-the-news/" class="news-resp footer-log">In the news</a>
-        <a href="/terms-of-use/" class="terms footer-log">Terms of use</a>
-        <a href="/newsletter/" class="footer-log" target="_blank">Newsletter</a>
+        <a href="http://kartainvestora.ru/" class="news-resp footer-log">In the news</a>
+        <a href="http://kartainvestora.ru/" class="terms footer-log">Terms of use</a>
+        <a href="http://kartainvestora.ru/" class="footer-log" target="_blank">Newsletter</a>
         <div class="icons">
 
 
-            <a href="http://silvanfrank.com/" class="icon globe" target="_blank">
+            <a href="http://kartainvestora.ru/" class="icon globe" target="_blank">
                 <img src="/static/my_app/images/globe.svg" alt="silvanfrank.com" id="globe-res">
             </a>
-            <a href="https://twitter.com/silvan_frank" class="icon twitter" target="_blank">
+            <a href="http://kartainvestora.ru/" class="icon twitter" target="_blank">
                 <img src="/static/my_app/images/twitter.svg" alt="Twitter" id="twitter-res">
             </a>
         </div>
-    </div>-->
+    </div>
 
     <div class="down">
-        <p>Charts powered by Highcharts. All rights reserved.</p>
+        <p>Charts powered by tradingview. All rights reserved.</p>
     </div>
 </footer>
