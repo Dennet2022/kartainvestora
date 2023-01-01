@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     public function index(Request $request)
     {
-        $posts = Post::with('category')->get();
+        $posts = Post::with('category')->orderBy('created_at', 'desc')->get();
         $categories = Category::all();
 
         return view('home', [
@@ -25,7 +25,7 @@ class PostController extends Controller
 
         $posts = Post::with('category')->whereHas('category', function($q) use($categorySlag) {
             $q->where('slug', $categorySlag);
-        })->get();
+        })->orderBy('created_at', 'desc')->get();
 
         $categories = Category::all();
 
