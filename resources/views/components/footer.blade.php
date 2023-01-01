@@ -10,7 +10,7 @@
 
 
                 <a href="http://kartainvestora.ru/" class="icon globe" target="_blank">
-                    <img src="/static/my_app/images/globe.svg" alt="silvanfrank.com" id="globe">
+                    <img src="/static/my_app/images/globe.svg" alt="Kartainvestora.ru" id="globe">
                 </a>
                 <a href="https://twitter.com/karta_investora" class="icon twitter" target="_blank">
                     <img src="/static/my_app/images/twitter.svg" alt="Twitter" id="twitter">
@@ -30,9 +30,9 @@
 
         </div>
         <div class="sec sec3">
-            <a href="http://kartainvestora.ru/" class="footer-log news">In the news</a>
-            <a href="http://kartainvestora.ru/" class="terms footer-log">Terms of use</a>
-            <a href="http://kartainvestora.ru/" class="footer-log" target="_blank">Newsletter</a>
+            <a href="http://kartainvestora.ru/" class="footer-log news">Новости</a>
+            <a href="http://kartainvestora.ru/" class="terms footer-log">О Нас</a>
+            <a href="http://kartainvestora.ru/" class="footer-log" target="_blank">Рассылка</a>
         </div>
     </div>
     <!-- FOOTER FOR PHONE -->
@@ -51,9 +51,9 @@
             </div>
         </a>
         <p class="bit-resp">Bitcoin Donations: bc1qvu8a9uy5p6lptdm3n3hyljer4s9ud2kfm4gv95</p>
-        <a href="http://kartainvestora.ru/" class="news-resp footer-log">In the news</a>
-        <a href="http://kartainvestora.ru/" class="terms footer-log">Terms of use</a>
-        <a href="http://kartainvestora.ru/" class="footer-log" target="_blank">Newsletter</a>
+        <a href="http://kartainvestora.ru/" class="news-resp footer-log">Новости</a>
+        <a href="http://kartainvestora.ru/" class="terms footer-log">О Нас</a>
+        <a href="http://kartainvestora.ru/" class="footer-log" target="_blank">Рассылка</a>
         <div class="icons">
 
 
@@ -67,6 +67,6 @@
     </div>
 
     <div class="down">
-        <p>Charts powered by tradingview. All rights reserved.</p>
+        <p>Charts powered by Tradingview. All rights reserved.</p>
     </div>
 </footer>
