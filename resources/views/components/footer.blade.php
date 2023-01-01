@@ -47,7 +47,7 @@
         </div>
         <a href="http://kartainvestora.ru/" class="fit">
             <div class="donate-resp button">
-                Donate
+                Поддержать
             </div>
         </a>
         <p class="bit-resp">Bitcoin Donations: bc1qvu8a9uy5p6lptdm3n3hyljer4s9ud2kfm4gv95</p>
