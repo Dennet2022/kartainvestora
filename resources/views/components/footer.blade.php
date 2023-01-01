@@ -4,7 +4,7 @@
 
 
             <div class=" long">
-                <a class="navbar-brand footer-brand" href="/">Kartainvestora</a>
+                <a class="navbar-brand footer-brand" href="/">Kartainvestora1</a>
             </div>
             <div class="icons">
 
