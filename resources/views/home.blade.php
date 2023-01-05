@@ -45,7 +45,10 @@
             <hr>
 
             <div class="card  row">
-                <h5 class="card-title">{{ $post->title }}</h5>
+                <h5 class="card-title">
+                    {{ $post->title }}
+                    <strong style="float:right; font-size:15px;">{{ \Carbon\Carbon::parse($post->created_at)->toDateString() }}</strong>
+                </h5>
                 <a href="{{ url($post->slug) }}">
                     <img class="card-img rounded img-fluid " src="/{{ $post->image }}" alt="{{ $post->title }}">
                 </a>
