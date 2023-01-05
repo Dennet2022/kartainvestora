@@ -11,8 +11,8 @@
 
         @if(!empty($post->image_graph))
             <div class="row">
-                <div class="col-md-12" style="display: flex; justify-content: center; margin: 20px 0;">
-                    <img src="{{ $post->image_graph }}" alt="{{ $post->title }}" style="width: 70%;">
+                <div class="col-md-12" style="margin: 0 3.6% 20px 3.6%;">
+                    <img src="{{ $post->image_graph }}" alt="{{ $post->title }}" style="max-width: 1600px;">
                 </div>
             </div>
         @endif
