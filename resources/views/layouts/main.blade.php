@@ -58,36 +58,36 @@
 
 <body class="light">
 
-<div class="modal" id="myModal" tabindex="-1" role="dialog">
-    <form class="mail modal-form">
+{{--<div class="modal" id="myModal" tabindex="-1" role="dialog">--}}
+{{--    <form class="mail modal-form">--}}
 
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="newsletter-img">
-                    <img src="/static/my_app/images/newsletter.svg" class="news-image" alt="Subscribe to newsletter">
-                </div>
-                <div class="news-content">
-          <span class="close-modal" id="closemodal">
-            <img src="/static/my_app/images/black-x.svg" class="close" alt="close">
-          </span>
-                    <h3>Subscribe to newsletter</h3>
-                    <p>Every month we send out an email about the latest developement in the charts</p>
-                    <form id="form-modal">
+{{--        <div class="modal-dialog" role="document">--}}
+{{--            <div class="modal-content">--}}
+{{--                <div class="newsletter-img">--}}
+{{--                    <img src="/static/my_app/images/newsletter.svg" class="news-image" alt="Subscribe to newsletter">--}}
+{{--                </div>--}}
+{{--                <div class="news-content">--}}
+{{--          <span class="close-modal" id="closemodal">--}}
+{{--            <img src="/static/my_app/images/black-x.svg" class="close" alt="close">--}}
+{{--          </span>--}}
+{{--                    <h3>Subscribe to newsletter</h3>--}}
+{{--                    <p>Every month we send out an email about the latest developement in the charts</p>--}}
+{{--                    <form id="form-modal">--}}
 
-                        <input type="text" id="email-subscribe-input-modal" onkeydown="validationModal()" name=""
-                               value="" placeholder="E-mail address">
-                        <span class="" id="verify-msg-modal" style="display:none;"></span>
-                        <button id="email-subscribe-submit-modal" type="submit" class="button news-button"
-                                name="button">Subscribe
-                        </button>
+{{--                        <input type="text" id="email-subscribe-input-modal" onkeydown="validationModal()" name=""--}}
+{{--                               value="" placeholder="E-mail address">--}}
+{{--                        <span class="" id="verify-msg-modal" style="display:none;"></span>--}}
+{{--                        <button id="email-subscribe-submit-modal" type="submit" class="button news-button"--}}
+{{--                                name="button">Subscribe--}}
+{{--                        </button>--}}
 
-                    </form>
-                </div>
-            </div>
-        </div>
-    </form>
+{{--                    </form>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </form>--}}
 
-</div>
+{{--</div>--}}
 
 @include('components.header')
 
