@@ -37,8 +37,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/static/my_app/images/touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="144x144" href="/static/my_app/images/touch-icon-144x144.png">
     <title>Kartainvestora | Найдите самые интересные финансовые графики!</title>
-    <meta name="description" content="Our mission is to find the most interesting and educational charts with rich historical data, and
-to make these charts available online.">
+    <meta name="description" content="Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные графики с богатыми историческими данными и сделать их доступными для вас.">
 
     <meta property="og:image" content="/static/my_app/images/longtermtrends-preview-image.png">
     <!-- link Bootstrap Core CSS -->
