@@ -9,29 +9,31 @@
 
     <div class="container">
 
-        @if(!empty($post->image_graph))
-            <div class="row">
-                <div class="col-md-12" style="margin: 0 3.6% 20px 3.6%;">
-                    <img src="{{ $post->image_graph }}" alt="{{ $post->title }}" style="max-width: 1600px;">
-                </div>
-            </div>
-        @endif
+            @foreach(\App\Models\Content::where('post_id', $post->id)->orderBy('id')->get() as $content)
+                @if(!empty($content->image_graph))
+                    <div class="row">
+                        <div class="col-md-12" style="margin: 0 3.6% 20px 3.6%;">
+                            <img src="{{ $content->image_graph }}" alt="{{ $content->title }}" style="max-width: 1600px;">
+                        </div>
+                    </div>
+                @endif
 
-        @if(isset($post->graph))
-            <div class="row">
-                <div class="col-md-12" style="margin: 0 3.6% 20px 3.6%;">
-                    {!! $post->graph !!}
-                </div>
-            </div>
-        @endif
+                @if(isset($content->graph))
+                    <div class="row">
+                        <div class="col-md-12" style="margin: 0 3.6% 20px 3.6%;">
+                            {!! $content->graph !!}
+                        </div>
+                    </div>
+                @endif
 
-        @if(isset($post->content))
-            <div class="row">
-                <div class="col-md-12">
-                    {!! $post->content !!}
-                </div>
-            </div>
-        @endif
+                @if(isset($content->content))
+                    <div class="row">
+                        <div class="col-md-12">
+                            {!! $content->content !!}
+                        </div>
+                    </div>
+                @endif
+            @endforeach
 
     </div>
 @endsection

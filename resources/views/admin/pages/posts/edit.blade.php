@@ -56,25 +56,55 @@
                                         @endforeach
                                     </select>
                                 </div>
+
                                 <div class="col-12">
                                     <label class="form-label">Slug</label>
                                     <input name="slug" type="text" class="form-control" placeholder="Slug" value="{{ $post->slug }}">
                                 </div>
-                                <div class="col-12">
-                                    <label class="form-label">Image Graph OR delete image <input type="checkbox" name="deleteImageGraph" value="1"></label>
-                                    <input name="image_graph" class="form-control" type="file" accept="image/*"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Graph</label>
-                                    <textarea name="graph" class="form-control" placeholder="Graph" rows="4" cols="4">{{ $post->graph }}</textarea>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Image OR delete image <input type="checkbox" name="deleteImage" value="1"></label>
-                                    <input name="image" class="form-control" type="file" accept="image/*">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Content</label>
-                                    <textarea name="content" id="tiny">{{ $post->content }}</textarea>
+
+                                @foreach(\App\Models\Content::where('post_id', $post->id)->orderBy('sort')->get() as $content)
+                                    @if(!empty($content->image_graph))
+                                        <div class="col-12" id="block{{ $content->id }}">
+                                            <label class="form-label">Image Graph</label>
+                                            <strong onClick="removeBlock({{ $content->id }})">[x]</strong>
+                                            <input name="blocks[][image_graph]" class="form-control" type="file" accept="image/*"></textarea>
+                                        </div>
+                                    @endif
+                                    @if(!empty($content->graph))
+                                        <div class="col-12" id="block{{ $content->id }}">
+                                            <label class="form-label">Graph</label>
+                                            <strong style="cursor:pointer;" onClick="removeBlock({{ $content->id }})">[x]</strong>
+                                            <textarea name="blocks[][graph]" class="form-control" placeholder="Graph" rows="4" cols="4">{{ $content->graph }}</textarea>
+                                        </div>
+                                    @endif
+                                    @if(!empty($content->image))
+                                        <div class="col-12" id="block{{ $content->id }}">
+                                            <label class="form-label">Image</label>
+                                            <strong style="cursor:pointer;" onClick="removeBlock({{ $content->id }})">[x]</strong>
+                                            <input name="blocks[][image]" class="form-control" type="file" accept="image/*">
+                                        </div>
+                                    @endif
+                                    @if(!empty($content->content))
+                                        <div class="col-12" id="block{{ $content->id }}">
+                                            <label class="form-label">Content</label>
+                                            <strong style="cursor:pointer;" onClick="removeBlock({{ $content->id }})">[x]</strong>
+                                            <textarea name="blocks[][content]" id="tiny">{{ $content->content }}</textarea>
+                                        </div>
+                                    @endif
+                                @endforeach
+
+                                <div class="row" id="pasteBeforeMe" style="margin-top:30px; padding: 15px; width:90%; margin-left:10px; border-radius: 10px; background: rgb(200,200,200);">
+                                    <strong>Add more content:</strong>
+                                    <div class="col-lg-6">
+                                        <select class="form-control" id="typeContent">
+                                            <option value="image_graph">Image Graph</option>
+                                            <option value="graph">Graph</option>
+                                            <option value="content">Content</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="button" class="btn btn-success" value="Add content" id="addMoreContent">
+                                    </div>
                                 </div>
 
                                 <div class="col-12">
@@ -93,10 +123,47 @@
     <script src="https://cdn.tiny.cloud/1/adgc4a84fdi0oohiuhh7jraparx5dpqqkhpqgv81gwpxe7u6/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-jquery@1/dist/tinymce-jquery.min.js"></script>
     <script>
-        $('textarea#tiny').tinymce({
-            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-            height: 500,
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function removeBlock(id) {
+            $('#block'+id).remove();
+        }
+
+        // $(document).ready(function() {
+        $('#addMoreContent').click(function() {
+            let typeContent = $('#typeContent').val();
+            let pasteBeforeMe = $('#pasteBeforeMe');
+
+            let random1 = getRandomInt(1000000);
+            let random2 = getRandomInt(1000000);
+            let random3 = getRandomInt(1000000);
+            let random4 = getRandomInt(1000000);
+
+            let imageGraph = '<div class="col-12" id="block'+ random1 +'"> <label class="form-label">Image Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random1 +')">X</strong> <input name="blocks[][image_graph]" class="form-control" type="file" accept="image/*"></textarea> </div>';
+            let graph = '<div class="col-12" id="block'+ random2 +'"> <label class="form-label">Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random2 +')">X</strong> <textarea name="blocks[][graph]" class="form-control" placeholder="Graph" rows="4" cols="4"></textarea> </div>';
+            let content = '<div class="col-12" id="block'+ random4 +'"> <label class="form-label">Content</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random4 +')">X</strong> <textarea class="tiny" name="blocks[][content]"></textarea> </div>';
+
+            if (typeContent === 'image_graph') {
+                pasteBeforeMe.before(imageGraph);
+            }
+
+            if (typeContent === 'graph') {
+                pasteBeforeMe.before(graph);
+            }
+
+            if (typeContent === 'content') {
+                pasteBeforeMe.before(content);
+
+                tinymce.init({
+                    selector: '.tiny',
+                    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+                    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+                    height: 500,
+                });
+            }
         });
+        // });
     </script>
 @endsection
