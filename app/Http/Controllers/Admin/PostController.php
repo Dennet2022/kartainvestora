@@ -38,6 +38,12 @@ class PostController extends Controller
             mkdir($path, 0777, true);
         }
 
+        $checkExistsSlug = Post::where('slug', $request->slug)->count();
+
+        if ($checkExistsSlug) {
+            die('This slug already exists');
+        }
+
         $post = Post::create(
             [
                 'category_id' => $request->category,

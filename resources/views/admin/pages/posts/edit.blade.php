@@ -67,28 +67,28 @@
                                         <div class="col-12" id="block{{ $content->id }}">
                                             <label class="form-label">Image Graph</label>
                                             <strong onClick="removeBlock({{ $content->id }})">[x]</strong>
-                                            <input name="blocks[][image_graph]" class="form-control" type="file" accept="image/*"></textarea>
+                                            <input name="blocks[{{ $content->sort }}][image_graph]" class="form-control countInput" type="file" accept="image/*"></textarea>
                                         </div>
                                     @endif
                                     @if(!empty($content->graph))
                                         <div class="col-12" id="block{{ $content->id }}">
                                             <label class="form-label">Graph</label>
                                             <strong style="cursor:pointer;" onClick="removeBlock({{ $content->id }})">[x]</strong>
-                                            <textarea name="blocks[][graph]" class="form-control" placeholder="Graph" rows="4" cols="4">{{ $content->graph }}</textarea>
+                                            <textarea name="blocks[{{ $content->sort }}][graph]" class="form-control countInput" placeholder="Graph" rows="4" cols="4">{{ $content->graph }}</textarea>
                                         </div>
                                     @endif
                                     @if(!empty($content->image))
                                         <div class="col-12" id="block{{ $content->id }}">
                                             <label class="form-label">Image</label>
                                             <strong style="cursor:pointer;" onClick="removeBlock({{ $content->id }})">[x]</strong>
-                                            <input name="blocks[][image]" class="form-control" type="file" accept="image/*">
+                                            <input name="blocks[{{ $content->sort }}][image]" class="form-control countInput" type="file" accept="image/*">
                                         </div>
                                     @endif
                                     @if(!empty($content->content))
                                         <div class="col-12" id="block{{ $content->id }}">
                                             <label class="form-label">Content</label>
                                             <strong style="cursor:pointer;" onClick="removeBlock({{ $content->id }})">[x]</strong>
-                                            <textarea name="blocks[][content]" id="tiny">{{ $content->content }}</textarea>
+                                            <textarea name="blocks[{{ $content->sort }}][content]" class="tiny countInput">{{ $content->content }}</textarea>
                                         </div>
                                     @endif
                                 @endforeach
@@ -131,6 +131,13 @@
             $('#block'+id).remove();
         }
 
+        tinymce.init({
+            selector: '.tiny',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            height: 500,
+        });
+
         // $(document).ready(function() {
         $('#addMoreContent').click(function() {
             let typeContent = $('#typeContent').val();
@@ -138,12 +145,13 @@
 
             let random1 = getRandomInt(1000000);
             let random2 = getRandomInt(1000000);
-            let random3 = getRandomInt(1000000);
             let random4 = getRandomInt(1000000);
 
-            let imageGraph = '<div class="col-12" id="block'+ random1 +'"> <label class="form-label">Image Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random1 +')">X</strong> <input name="blocks[][image_graph]" class="form-control" type="file" accept="image/*"></textarea> </div>';
-            let graph = '<div class="col-12" id="block'+ random2 +'"> <label class="form-label">Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random2 +')">X</strong> <textarea name="blocks[][graph]" class="form-control" placeholder="Graph" rows="4" cols="4"></textarea> </div>';
-            let content = '<div class="col-12" id="block'+ random4 +'"> <label class="form-label">Content</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random4 +')">X</strong> <textarea class="tiny" name="blocks[][content]"></textarea> </div>';
+            let indexInput = $('.countInput').length + 1;
+
+            let imageGraph = '<div class="col-12" id="block'+ random1 +'"> <label class="form-label">Image Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random1 +')">X</strong> <input name="blocks['+ indexInput +'][image_graph]" class="form-control countInput" type="file" accept="image/*"></textarea> </div>';
+            let graph = '<div class="col-12" id="block'+ random2 +'"> <label class="form-label">Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random2 +')">X</strong> <textarea name="blocks['+ indexInput +'][graph]" class="form-control countInput" placeholder="Graph" rows="4" cols="4"></textarea> </div>';
+            let content = '<div class="col-12" id="block'+ random4 +'"> <label class="form-label">Content</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random4 +')">X</strong> <textarea class="tiny countInput" name="blocks['+ indexInput +'][content]"></textarea> </div>';
 
             if (typeContent === 'image_graph') {
                 pasteBeforeMe.before(imageGraph);
