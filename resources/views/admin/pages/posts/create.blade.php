@@ -59,6 +59,10 @@
                                     <label class="form-label">Slug</label>
                                     <input name="slug" type="text" class="form-control" placeholder="Slug">
                                 </div>
+                                <div class="col-12">
+                                    <label class="form-label">Image</label>
+                                    <input name="image" class="form-control" type="file" accept="image/*">
+                                </div>
 
                                 <div class="row" id="pasteBeforeMe" style="margin-top:30px; padding: 15px; width:90%; margin-left:10px; border-radius: 10px; background: rgb(200,200,200);">
                                     <strong>Add more content:</strong>

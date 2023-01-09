@@ -38,6 +38,15 @@ class PostController extends Controller
             mkdir($path, 0777, true);
         }
 
+        $uuid = Uuid::uuid4()->toString();
+        $filename = $uuid . '.jpg';
+
+        $fileData = $request->hasFile('image') && $request->file('image')->isValid() ? $request->file('image') : $request->get('image');
+        if($fileData) {
+            $image = \Intervention\Image\Facades\Image::make($fileData);
+            $image->save($path . $filename);
+        }
+
         $checkExistsSlug = Post::where('slug', $request->slug)->count();
 
         if ($checkExistsSlug) {
@@ -50,6 +59,7 @@ class PostController extends Controller
                 'slug' => $request->slug ?? Str::random(16),
                 'title' => $request->title ?? Str::random(16),
                 'description' => $request->description ?? Str::random(16),
+                'image' => $fileData ? 'storage/images/' . $filename : '',
             ]
         );
 
@@ -109,6 +119,22 @@ class PostController extends Controller
             }
         }
 
+        if ($request->deleteImage == 1) {
+            $post->update(
+                [
+                    'image' => '',
+                ]
+            );
+        } else {
+            if ($fileData) {
+                $post->update(
+                    [
+                        'image' => 'storage/images/' . $filename,
+                    ]
+                );
+            }
+        }
+
         // ----
 
         return redirect(route('admin.posts.index'));
@@ -131,6 +157,15 @@ class PostController extends Controller
         $postId = $request->post;
 
         $path = storage_path() . '/app/public/images/';
+
+        $uuid = Uuid::uuid4()->toString();
+        $filename = $uuid . '.jpg';
+
+        $fileData = $request->hasFile('image') && $request->file('image')->isValid() ? $request->file('image') : $request->get('image');
+        if($fileData) {
+            $image = \Intervention\Image\Facades\Image::make($fileData);
+            $image->save($path . $filename);
+        }
 
         $post = Post::find($postId);
         $post->update(
@@ -198,6 +233,22 @@ class PostController extends Controller
                         die($e->getMessage());
                     }
                 }
+            }
+        }
+
+        if ($request->deleteImage == 1) {
+            $post->update(
+                [
+                    'image' => '',
+                ]
+            );
+        } else {
+            if ($fileData) {
+                $post->update(
+                    [
+                        'image' => 'storage/images/' . $filename,
+                    ]
+                );
             }
         }
 

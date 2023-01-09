@@ -62,6 +62,11 @@
                                     <input name="slug" type="text" class="form-control" placeholder="Slug" value="{{ $post->slug }}">
                                 </div>
 
+                                <div class="col-12">
+                                    <label class="form-label">Image OR delete image <input type="checkbox" name="deleteImage" value="1"></label>
+                                    <input name="image" class="form-control" type="file" accept="image/*">
+                                </div>
+
                                 @foreach(\App\Models\Content::where('post_id', $post->id)->orderBy('sort')->get() as $content)
                                     @if(!empty($content->image_graph))
                                         <div class="col-12" id="block{{ $content->id }}">
