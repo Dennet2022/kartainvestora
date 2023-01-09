@@ -63,7 +63,7 @@ class PostController extends Controller
             ]
         );
 
-        if (null !== $post) {
+        if (null !== $post && !empty($request->blocks)) {
             foreach ($request->blocks as $key => $block) {
                 foreach ($block as $type => $value) {
                     $image = null;
@@ -176,7 +176,7 @@ class PostController extends Controller
             ]
         );
 
-        if (null !== $post) {
+        if (null !== $post && !empty($request->blocks)) {
             foreach (Content::where('post_id', $post->id)->get() as $c) {
                 $c->delete();
             }
