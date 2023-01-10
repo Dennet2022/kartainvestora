@@ -226,19 +226,19 @@ class PostController extends Controller
 
                     try {
                         if (!empty($checkExists)) {
-                            if (!empty($graph)) {
-                                $post->graph = $graph;
-                                $post->save();
+                            if (!empty($checkExists)) {
+                                $checkExists->graph = $graph;
+                                $checkExists->save();
                             }
 
-                            if (!empty($imageGraph)) {
-                                $post->imageGraph = $imageGraph;
-                                $post->save();
+                            if (!empty($checkExists)) {
+                                $checkExists->imageGraph = $imageGraph;
+                                $checkExists->save();
                             }
 
-                            if (!empty($content)) {
-                                $post->content = $content;
-                                $post->save();
+                            if (!empty($checkExists)) {
+                                $checkExists->content = $content;
+                                $checkExists->save();
                             }
                         } else {
                             Content::create([
