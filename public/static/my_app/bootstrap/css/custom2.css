@@ -1069,6 +1069,16 @@ text-align: center;
   }
 }
 
+.mgimg {
+    max-width: 100%;
+}
+
+@media screen and (min-width:1600px) {
+    .mgimg {
+        max-width: 1600px !important;
+    }
+}
+
 
 /* Ipad pro */
 @media only screen and (max-width: 1024px){

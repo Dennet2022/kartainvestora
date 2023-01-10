@@ -26,16 +26,6 @@ File: style.css
 
 /* General */
 
-.mgimg {
-    max-width: 100%;
-}
-
-@media screen and (min-width:1600px) {
-    .mgimg {
-        max-width: 1600px !important;
-    }
-}
-
 body {
     font-size: 14px;
 	color: #4c5258;
