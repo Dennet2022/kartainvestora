@@ -227,7 +227,7 @@
             console.log('window width');
             console.log(w);
 
-            $('.gr img').style('max-width', '90%');
+            $('.gr img').style('max-width', w+'px');
         });
         let w = $(window).width()/100*90;
         if (w > 1600) {
@@ -236,7 +236,7 @@
         $( "iframe" ).attr('width', w); // .attr('height', $(window).height()/100*90);
         console.log('window width');
         console.log(w);
-        $('.gr img').style('max-width', '90%');
+        $('.gr img').style('max-width', w+'px');
     });
 </script>
 
