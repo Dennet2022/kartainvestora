@@ -221,11 +221,11 @@
         $(window).resize(function() {
             $( "iframe" ).attr('width', $(window).width());
             console.log('window width');
-            console.log($(window).width());
+            console.log($(window).width()/100*95);
         });
         $( "iframe" ).attr('width', $(window).width());
         console.log('window width');
-        console.log($(window).width());
+        console.log($(window).width()/100*95);
     });
 </script>
 
