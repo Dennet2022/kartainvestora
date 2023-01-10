@@ -227,7 +227,7 @@
             console.log('window width');
             console.log(w);
 
-            $('.mgimg').style('max-width', w+'px !important');
+            $('.mgimg').css('max-width', w+'px !important');
         });
         let w = $(window).width()/100*90;
         if (w > 1600) {
@@ -236,7 +236,7 @@
         $( "iframe" ).attr('width', w); // .attr('height', $(window).height()/100*90);
         console.log('window width');
         console.log(w);
-        $('.mgimg').style('max-width', w+'px !important');
+        $('.mgimg').css('max-width', w+'px !important');
     });
 </script>
 
