@@ -232,7 +232,7 @@ class PostController extends Controller
                             }
 
                             if (!empty($checkExists)) {
-                                $checkExists->imageGraph = $imageGraph;
+                                $checkExists->image_graph = $imageGraph;
                                 $checkExists->save();
                             }
 
