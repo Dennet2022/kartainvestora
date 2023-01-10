@@ -13,7 +13,7 @@
                 @if(!empty($content->image_graph))
                     <div class="row gr">
                         <div class="col-md-12" style="margin: 0 3.6% 20px 3.6%;">
-                            <img src="{{ $content->image_graph }}" alt="{{ $content->title }}">
+                            <img class="mgimg" src="{{ $content->image_graph }}" alt="{{ $content->title }}">
                         </div>
                     </div>
                 @endif
