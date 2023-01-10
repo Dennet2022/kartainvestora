@@ -216,6 +216,19 @@
 
 </script>
 
+<script>
+    $(document).ready(function() {
+        $(window).resize(function() {
+            $( "iframe" ).attr('width', $(window).width());
+            console.log('window width');
+            console.log($(window).width());
+        });
+        $( "iframe" ).attr('width', $(window).width());
+        console.log('window width');
+        console.log($(window).width());
+    });
+</script>
+
 
 </body>
 
