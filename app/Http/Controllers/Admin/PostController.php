@@ -177,12 +177,16 @@ class PostController extends Controller
         );
 
         if (null !== $post && !empty($request->blocks)) {
-            foreach (Content::where('post_id', $post->id)->get() as $c) {
-                $c->delete();
-            }
+//            foreach (Content::where('post_id', $post->id)->get() as $c) {
+//                $c->delete();
+//            }
 
             foreach ($request->blocks as $key => $block) {
                 foreach ($block as $type => $value) {
+                    $checkExists = Content::where('post_id', $post->id)
+                        ->where('sort', $key)
+                        ->first();
+
                     $image = null;
                     $imageGraph = null;
                     $graph = null;
@@ -221,14 +225,31 @@ class PostController extends Controller
                     }
 
                     try {
-                        Content::create([
-                            'post_id' => $post->id,
-                            'image' => $image,
-                            'image_graph' => $imageGraph,
-                            'graph' => $graph,
-                            'sort' => $key,
-                            'content' => $content,
-                        ]);
+                        if (!empty($checkExists)) {
+                            if (!empty($graph)) {
+                                $post->graph = $graph;
+                                $post->save();
+                            }
+
+                            if (!empty($imageGraph)) {
+                                $post->imageGraph = $imageGraph;
+                                $post->save();
+                            }
+
+                            if (!empty($content)) {
+                                $post->content = $content;
+                                $post->save();
+                            }
+                        } else {
+                            Content::create([
+                                'post_id' => $post->id,
+                                'image' => $image,
+                                'image_graph' => $imageGraph,
+                                'graph' => $graph,
+                                'sort' => $key,
+                                'content' => $content,
+                            ]);
+                        }
                     } catch (\Exception $e) {
                         die($e->getMessage());
                     }
