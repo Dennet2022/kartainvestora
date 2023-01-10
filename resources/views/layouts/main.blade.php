@@ -219,13 +219,13 @@
 <script>
     $(document).ready(function() {
         $(window).resize(function() {
-            $( "iframe" ).attr('width', $(window).width()/100*90).attr('height', $(window).height()/100*90);
+            $( "iframe" ).attr('width', $(window).width()/100*90); // .attr('height', $(window).height()/100*90);
             console.log('window width');
             console.log($(window).width()/100*90);
 
             $('.gr img').style('max-width', '90%');
         });
-        $( "iframe" ).attr('width', $(window).width()/100*90).attr('height', $(window).height()/100*90);
+        $( "iframe" ).attr('width', $(window).width()/100*90); // .attr('height', $(window).height()/100*90);
         console.log('window width');
         console.log($(window).width()/100*90);
         $('.gr img').style('max-width', '90%');
