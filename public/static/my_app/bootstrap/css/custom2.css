@@ -1045,10 +1045,6 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255,255,255,1
 
   }
 
-  .container h3,.container p {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .container ul{
   margin-left: 2em;
   padding-left: 1em;
@@ -1091,10 +1087,6 @@ text-align: center;
     padding-left: 13px;
     padding-right: 13px;
 
-  }
-  .container h3,.container p {
-    padding-left: 20px;
-    padding-right: 20px;
   }
   .container ul{
   margin-left: 2em;
