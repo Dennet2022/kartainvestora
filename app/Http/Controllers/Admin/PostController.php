@@ -246,6 +246,7 @@ class PostController extends Controller
                             }
 
                             if (!empty($content)) {
+                                die('1'.$imageGraph);
                                 $checkExists->content = $content;
                                 $checkExists->graph = $graph;
                                 $checkExists->image_graph = $imageGraph;
