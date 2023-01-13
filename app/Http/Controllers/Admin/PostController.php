@@ -181,7 +181,6 @@ class PostController extends Controller
 //                $c->delete();
 //            }
 
-            $lastKey = 0;
             $notContentIds = [];
 
             foreach ($request->blocks as $key => $block) {
@@ -270,8 +269,6 @@ class PostController extends Controller
                         die($e->getMessage());
                     }
                 }
-
-                $lastKey = $key;
             }
 
             $checkOtherExists = Content::where('post_id', $post->id)
