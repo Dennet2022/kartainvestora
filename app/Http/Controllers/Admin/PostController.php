@@ -226,21 +226,21 @@ class PostController extends Controller
 
                     try {
                         if (!empty($checkExists)) {
-                            if (!empty($checkExists)) {
+                            if (!empty($graph)) {
                                 $checkExists->graph = $graph;
                                 $checkExists->image_graph = $imageGraph;
                                 $checkExists->content = $content;
                                 $checkExists->save();
                             }
 
-                            if (!empty($checkExists)) {
+                            if (!empty($imageGraph)) {
                                 $checkExists->image_graph = $imageGraph;
                                 $checkExists->content = $content;
                                 $checkExists->graph = $graph;
                                 $checkExists->save();
                             }
 
-                            if (!empty($checkExists)) {
+                            if (!empty($content)) {
                                 $checkExists->content = $content;
                                 $checkExists->graph = $graph;
                                 $checkExists->image_graph = $imageGraph;
