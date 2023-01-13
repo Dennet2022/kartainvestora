@@ -176,19 +176,17 @@ class PostController extends Controller
             ]
         );
 
-        if (null !== $post && !empty($request->blocks)) {
-//            foreach (Content::where('post_id', $post->id)->get() as $c) {
-//                $c->delete();
-//            }
+        $blocks = $request->blocks;
 
+        foreach ($request->files['blocks']['name'] as $fileIndex => $file) {
+            $blocks[$fileIndex] = $file;
+        }
+
+        if (null !== $post && !empty($blocks)) {
             $notContentIds = [];
 
-            die(print_r($_FILES,true));
-
-            foreach ($request->blocks as $key => $block) {
+            foreach ($blocks as $key => $block) {
                 foreach ($block as $type => $value) {
-                    echo $key.'-';
-
                     $checkExists = Content::where('post_id', $post->id)
                         ->where('sort', $key)
                         ->first();
