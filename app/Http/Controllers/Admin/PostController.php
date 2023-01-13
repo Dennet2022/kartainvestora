@@ -185,6 +185,8 @@ class PostController extends Controller
 
             foreach ($request->blocks as $key => $block) {
                 foreach ($block as $type => $value) {
+                    echo $key.'-';
+
                     $checkExists = Content::where('post_id', $post->id)
                         ->where('sort', $key)
                         ->first();
