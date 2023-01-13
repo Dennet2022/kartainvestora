@@ -230,8 +230,10 @@ class PostController extends Controller
                             $checkExists->image_graph = null;
                             $checkExists->content = null;
                             $checkExists->save();
+                            echo '1';
 
                             if (!empty($graph)) {
+                                echo 'xx';
                                 $checkExists->graph = $graph;
                                 $checkExists->image_graph = $imageGraph;
                                 $checkExists->content = $content;
@@ -239,6 +241,7 @@ class PostController extends Controller
                             }
 
                             if (!empty($imageGraph)) {
+                                echo 'yy';
                                 $checkExists->image_graph = $imageGraph;
                                 $checkExists->content = $content;
                                 $checkExists->graph = $graph;
@@ -246,12 +249,16 @@ class PostController extends Controller
                             }
 
                             if (!empty($content)) {
+                                echo 'ww';
                                 $checkExists->content = $content;
                                 $checkExists->graph = $graph;
                                 $checkExists->image_graph = $imageGraph;
                                 $checkExists->save();
                             }
+
+                            die();
                         } else {
+                            die('create');
                             Content::create([
                                 'post_id' => $post->id,
                                 'image' => $image,
