@@ -232,6 +232,7 @@ class PostController extends Controller
                                 $checkExists->graph = $graph;
                                 $checkExists->image_graph = $imageGraph;
                                 $checkExists->content = $content;
+                                $checkExists->sort = $key;
                                 $checkExists->save();
                             }
 
@@ -239,6 +240,7 @@ class PostController extends Controller
                                 $checkExists->image_graph = $imageGraph;
                                 $checkExists->content = $content;
                                 $checkExists->graph = $graph;
+                                $checkExists->sort = $key;
                                 $checkExists->save();
                             }
 
@@ -246,6 +248,7 @@ class PostController extends Controller
                                 $checkExists->content = $content;
                                 $checkExists->graph = $graph;
                                 $checkExists->image_graph = $imageGraph;
+                                $checkExists->sort = $key;
                                 $checkExists->save();
                             }
                         } else {
@@ -266,7 +269,6 @@ class PostController extends Controller
                 $lastKey = $key;
             }
 
-            die($lastKey.'-');
             $checkOtherExists = Content::where('post_id', $post->id)
                 ->where('sort', '>', $lastKey)
                 ->get();
