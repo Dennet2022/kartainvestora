@@ -185,7 +185,7 @@ class PostController extends Controller
         if (null !== $post) {
             $notContentIds = [];
 
-            foreach ($blocks as $key => $block) {
+            foreach ($blocks ?? [] as $key => $block) {
                 foreach ($block ?? [] as $type => $value) {
                     $checkExists = Content::where('post_id', $post->id)
                         ->where('sort', $key)
