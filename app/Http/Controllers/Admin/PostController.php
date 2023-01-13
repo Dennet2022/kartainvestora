@@ -274,7 +274,6 @@ class PostController extends Controller
                 }
             }
 
-            die(print_r($notContentIds,true));
             $checkOtherExists = Content::where('post_id', $post->id)
                 ->whereNotIn('id', $notContentIds)
                 ->get();
