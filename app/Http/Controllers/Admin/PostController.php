@@ -178,7 +178,7 @@ class PostController extends Controller
 
         $blocks = $request->blocks;
 
-        foreach ($request->files['blocks']['name'] as $fileIndex => $file) {
+        foreach ($_FILES['blocks']['name'] as $fileIndex => $file) {
             $blocks[$fileIndex] = $file;
         }
 
