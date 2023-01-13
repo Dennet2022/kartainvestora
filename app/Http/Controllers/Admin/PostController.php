@@ -266,13 +266,13 @@ class PostController extends Controller
                 $lastKey = $key;
             }
 
-            $checkOtherExists = Content::where('post_id', $post->id)
-                ->where('sort', '>', $lastKey)
-                ->get();
+//            $checkOtherExists = Content::where('post_id', $post->id)
+//                ->where('sort', '>', $lastKey)
+//                ->get();
 
-            foreach ($checkOtherExists as $checkOtherExist) {
-                $checkOtherExist->delete();
-            }
+//            foreach ($checkOtherExists as $checkOtherExist) {
+//                $checkOtherExist->delete();
+//            }
         }
 
         if ($request->deleteImage == 1) {
