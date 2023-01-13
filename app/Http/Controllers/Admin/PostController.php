@@ -183,6 +183,8 @@ class PostController extends Controller
 
             $notContentIds = [];
 
+            die(print_r($request->blocks,true));
+
             foreach ($request->blocks as $key => $block) {
                 foreach ($block as $type => $value) {
                     echo $key.'-';
