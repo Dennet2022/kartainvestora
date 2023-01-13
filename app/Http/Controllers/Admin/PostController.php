@@ -181,6 +181,8 @@ class PostController extends Controller
 //                $c->delete();
 //            }
 
+            $lastKey = 0;
+
             foreach ($request->blocks as $key => $block) {
                 foreach ($block as $type => $value) {
                     $checkExists = Content::where('post_id', $post->id)
@@ -246,7 +248,6 @@ class PostController extends Controller
                             }
 
                             if (!empty($content)) {
-                                die('1'.$imageGraph);
                                 $checkExists->content = $content;
                                 $checkExists->graph = $graph;
                                 $checkExists->image_graph = $imageGraph;
@@ -266,6 +267,16 @@ class PostController extends Controller
                         die($e->getMessage());
                     }
                 }
+
+                $lastKey = $key;
+            }
+
+            $checkOtherExists = Content::where('post_id', $post->id)
+                ->where('sort', '>', $lastKey)
+                ->get();
+
+            foreach ($checkOtherExists as $checkOtherExist) {
+                $checkOtherExist->delete();
             }
         }
 
