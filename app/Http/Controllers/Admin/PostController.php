@@ -182,12 +182,17 @@ class PostController extends Controller
 //            }
 
             $lastKey = 0;
+            $notContentIds = [];
 
             foreach ($request->blocks as $key => $block) {
                 foreach ($block as $type => $value) {
                     $checkExists = Content::where('post_id', $post->id)
                         ->where('sort', $key)
                         ->first();
+
+                    if (null !== $checkExists) {
+                        $notContentIds[] = $checkExists->id;
+                    }
 
                     $image = null;
                     $imageGraph = null;
@@ -270,7 +275,7 @@ class PostController extends Controller
             }
 
             $checkOtherExists = Content::where('post_id', $post->id)
-                ->where('sort', '>', $lastKey)
+                ->whereNotIn('id', $notContentIds)
                 ->get();
 
             foreach ($checkOtherExists as $checkOtherExist) {
