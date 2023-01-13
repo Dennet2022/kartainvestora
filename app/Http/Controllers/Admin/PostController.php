@@ -182,11 +182,11 @@ class PostController extends Controller
             $blocks[$fileIndex] = $file;
         }
 
-        if (null !== $post && !empty($blocks)) {
+        if (null !== $post) {
             $notContentIds = [];
 
             foreach ($blocks as $key => $block) {
-                foreach ($block as $type => $value) {
+                foreach ($block ?? [] as $type => $value) {
                     $checkExists = Content::where('post_id', $post->id)
                         ->where('sort', $key)
                         ->first();
