@@ -256,7 +256,7 @@ class PostController extends Controller
                                 $checkExists->save();
                             }
                         } else {
-                            Content::create([
+                            $newContent = Content::create([
                                 'post_id' => $post->id,
                                 'image' => $image,
                                 'image_graph' => $imageGraph,
@@ -264,6 +264,7 @@ class PostController extends Controller
                                 'sort' => $key,
                                 'content' => $content,
                             ]);
+                            $notContentIds[] = $newContent->id;
                         }
                     } catch (\Exception $e) {
                         die($e->getMessage());
