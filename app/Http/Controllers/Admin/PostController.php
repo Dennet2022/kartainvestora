@@ -173,6 +173,7 @@ class PostController extends Controller
                 'category_id' => $request->category,
                 'slug' => $request->slug,
                 'title' => $request->title,
+                'description' => $request->description ?? null,
             ]
         );
 
