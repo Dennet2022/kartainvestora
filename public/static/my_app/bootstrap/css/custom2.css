@@ -1743,7 +1743,7 @@ height: auto;
 
 @media screen and (min-width: 1024px) {
     .card-text {
-        max-height: 95px !important;
+        max-height: 110px !important;
         overflow: hidden !important;
     }
 }
