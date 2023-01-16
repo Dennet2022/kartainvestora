@@ -1754,3 +1754,8 @@ height: auto;
     color: #58667E !important;
     font-family: sans-serif !important;
 }
+
+.filter span {
+    font-size: 15px !important;
+    font-family: sans-serif !important;
+}
