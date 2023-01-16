@@ -698,8 +698,8 @@ display: block;
 
     @media screen and (min-width: 1024px) {
         .card-body {
-            max-height: 95px;
-            overflow: hidden;
+            max-height: 95px !important;
+            overflow: hidden !important;
         }
     }
 
