@@ -711,8 +711,21 @@ display: block;
   margin-bottom: 2em;
   margin-top:  2.1875em;
 }
+    .imageMobile {
+        display: none;
+    }
 
-
+    @media screen and (max-width: 1024px) {
+        .card-btn {
+            display: none;
+        }
+        .imageFullscreen {
+            display: none;
+        }
+        .imageMobile {
+            display: block !important;
+        }
+    }
 
 /* footer phone */
 

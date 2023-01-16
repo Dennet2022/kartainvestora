@@ -49,9 +49,10 @@
                 <h5 class="card-title">
                     {{ $post->title }}
                 </h5>
-                <a href="{{ url($post->slug) }}">
+                <a href="{{ url($post->slug) }}" class="imageFullscreen">
                     <img class="card-img rounded img-fluid " src="/{{ $post->image }}" alt="{{ $post->title }}">
                 </a>
+                <img class="card-img rounded img-fluid imageMobile" style="display: none;" src="/{{ $post->image }}" alt="{{ $post->title }}">
                 <div class="card-body">
                     <p class="card-text">{!! $post->description !!}</p>
                     <a href="{{ url($post->slug) }}" class="card-btn">
