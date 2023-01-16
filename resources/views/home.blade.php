@@ -45,6 +45,7 @@
             <hr>
 
             <div class="card  row">
+                <strong style="float:left; padding:15px; color:grey; display: block; font-size:15px;">{{ $post->category->name ?? '' }}</strong>
                 <strong style="float:right; padding:15px; color:grey; display: block; font-size:15px;">{{ \Carbon\Carbon::parse($post->created_at)->toDateString() }}</strong>
                 <h5 class="card-title">
                     {{ $post->title }}
