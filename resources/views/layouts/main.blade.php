@@ -238,21 +238,6 @@
     });
 </script>
 
-<script>
-    $(document).ready(function(){
-        var iframe = $(".tradingview-widget iframe").contents();
-        console.log('iframe');
-        console.log(iframe);
-        var more = iframe.find('#load-more-button');
-        console.log('more');
-        console.log(more);
-        more.click(function() {
-            alert('1');
-        });
-    });
-</script>
-
-
 </body>
 
 </html>
