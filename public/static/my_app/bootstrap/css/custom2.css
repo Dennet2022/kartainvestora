@@ -373,7 +373,7 @@ input:focus {
 
 .card p {
   width: 42rem;
-  height: 8rem;
+  /*height: 8rem;*/
   font-size: 16px;
   color: #474747;
   text-align: center;
@@ -698,7 +698,7 @@ display: block;
 
 .card p {
   width: 25em;
-  height: 8rem;
+  /*height: 8rem;*/
   font-size: 3vw;
   margin: auto;
 }
