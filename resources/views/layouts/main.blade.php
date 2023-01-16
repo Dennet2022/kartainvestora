@@ -67,9 +67,9 @@
 {{--                    <img src="/static/my_app/images/newsletter.svg" class="news-image" alt="Subscribe to newsletter">--}}
 {{--                </div>--}}
 {{--                <div class="news-content">--}}
-{{--          <span class="close-modal" id="closemodal">--}}
-{{--            <img src="/static/my_app/images/black-x.svg" class="close" alt="close">--}}
-{{--          </span>--}}
+          <span class="close-modal" id="closemodal">
+            <img src="/static/my_app/images/black-x.svg" class="close" alt="close">
+          </span>
 {{--                    <h3>Subscribe to newsletter</h3>--}}
 {{--                    <p>Every month we send out an email about the latest developement in the charts</p>--}}
 {{--                    <form id="form-modal">--}}
@@ -235,6 +235,20 @@
         $( "iframe" ).attr('width', w); // .attr('height', $(window).height()/100*90);
         console.log('window width');
         console.log(w);
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        var iframe = $(".tradingview-widget iframe").contents();
+        console.log('iframe');
+        console.log(iframe);
+        var more = iframe.find('#load-more-button');
+        console.log('more');
+        console.log(more);
+        more.click(function() {
+            alert('1');
+        });
     });
 </script>
 
