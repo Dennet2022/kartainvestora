@@ -696,6 +696,11 @@ display: block;
   margin-bottom: 1.25em;
 }
 
+.card-body {
+    max-height: 95px;
+    overflow: hidden;
+}
+
 .card p {
   width: 30em;
   /*height: 8rem;*/
