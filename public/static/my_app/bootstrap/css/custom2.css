@@ -696,13 +696,6 @@ display: block;
   margin-bottom: 1.25em;
 }
 
-    @media screen and (min-width: 1024px) {
-        .card-body {
-            max-height: 95px !important;
-            overflow: hidden !important;
-        }
-    }
-
 .card p {
   width: 30em;
   /*height: 8rem;*/
@@ -1746,4 +1739,11 @@ height: auto;
 }
 .category {
     line-height: 2.5;
+}
+
+@media screen and (min-width: 1024px) {
+    .card-body {
+        max-height: 95px !important;
+        overflow: hidden !important;
+    }
 }
