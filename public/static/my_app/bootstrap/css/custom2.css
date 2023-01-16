@@ -1747,3 +1747,10 @@ height: auto;
         overflow: hidden !important;
     }
 }
+
+.card strong {
+    font-weight: bold;
+    font-size: 15px;
+    color: #58667E;
+    font-family: sans-serif;
+}
