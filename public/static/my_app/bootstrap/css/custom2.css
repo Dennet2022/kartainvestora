@@ -1755,8 +1755,8 @@ height: auto;
     font-family: sans-serif !important;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .card strong {
-        font-size: 5px !important;
+        font-size: 11px !important;
     }
 }
