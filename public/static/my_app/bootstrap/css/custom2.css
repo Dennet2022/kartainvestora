@@ -1755,7 +1755,8 @@ height: auto;
     font-family: sans-serif !important;
 }
 
-.filter span {
-    font-size: 15px !important;
-    font-family: sans-serif !important;
+@media screen and (min-width: 1024px) {
+    .card strong {
+        font-size: 5px !important;
+    }
 }
