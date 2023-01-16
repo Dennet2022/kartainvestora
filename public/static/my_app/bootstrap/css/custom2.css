@@ -697,12 +697,9 @@ display: block;
 }
 
 .card p {
-  /*width: 25em;*/
+  width: 35em;
   /*height: 8rem;*/
     padding-bottom: 20px;
-    padding-top: 10px;
-    padding-left:20px;
-    padding-right:20px;
   font-size: 3vw;
   margin: auto;
 }
