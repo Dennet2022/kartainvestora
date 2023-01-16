@@ -699,6 +699,7 @@ display: block;
 .card p {
   width: 25em;
   /*height: 8rem;*/
+    padding-bottom: 20px;
   font-size: 3vw;
   margin: auto;
 }
