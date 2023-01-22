@@ -67,36 +67,28 @@
 
 <body class="light">
 
-{{--<div class="modal" id="myModal" tabindex="-1" role="dialog">--}}
-{{--    <form class="mail modal-form">--}}
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <form class="mail modal-form">
 
-{{--        <div class="modal-dialog" role="document">--}}
-{{--            <div class="modal-content">--}}
-{{--                <div class="newsletter-img">--}}
-{{--                    <img src="/static/my_app/images/newsletter.svg" class="news-image" alt="Subscribe to newsletter">--}}
-{{--                </div>--}}
-{{--                <div class="news-content">--}}
-          <span class="close-modal" id="closemodal">
-            <img src="/static/my_app/images/black-x.svg" class="close" alt="close">
-          </span>
-{{--                    <h3>Subscribe to newsletter</h3>--}}
-{{--                    <p>Every month we send out an email about the latest developement in the charts</p>--}}
-{{--                    <form id="form-modal">--}}
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="">
+                  <span class="close-modal" id="closemodal">
+                    <img src="/static/my_app/images/black-x.svg" class="close" alt="close">
+                  </span>
+                    <div class="content">
+                        <h3>Сохраните наш сайт</h3>
+                        <p>1. Нажмите на кнопку Поделиться (если вы не видите нижнего меню, нажмите внизу экрана).</p>
+                        <p>2. В появившемся меню выберите На экран «Домой».</p>
+                        <p>3. На следующем экране вы сможете дать своему шорткату подходящее название и проверить веб-адрес.</p>
+                        <p>4. Нажмите кнопку Добавить. На экране вашего iPhone или iPad появится ярлык нашего веб-ресурса. Достаточно нажать на него — и вы сразу же перейдете к любимому сайту.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 
-{{--                        <input type="text" id="email-subscribe-input-modal" onkeydown="validationModal()" name=""--}}
-{{--                               value="" placeholder="E-mail address">--}}
-{{--                        <span class="" id="verify-msg-modal" style="display:none;"></span>--}}
-{{--                        <button id="email-subscribe-submit-modal" type="submit" class="button news-button"--}}
-{{--                                name="button">Subscribe--}}
-{{--                        </button>--}}
-
-{{--                    </form>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </form>--}}
-
-{{--</div>--}}
+</div>
 
 @include('components.header')
 

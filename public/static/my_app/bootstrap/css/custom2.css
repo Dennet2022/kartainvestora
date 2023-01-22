@@ -106,7 +106,7 @@ br, hr {
     cursor: pointer;
     color: #000;
     padding: 0.65rem 2rem;
-    margin-right: 75px;
+    margin-right: 20px;
     border: 1px solid #e7eaf3;
 }
 
@@ -1393,6 +1393,10 @@ input:focus {
     background-color: #171717;
 }
 
+.modal-content .content {
+    margin: 20px;
+}
+
 .darkmode .modal-title {
     color: #fff;
 }
@@ -1565,8 +1569,6 @@ input:focus {
 
 .modal-content {
     background-color: #f6f6f6;
-    height: 390px;
-
 }
 
 .close {
@@ -1687,12 +1689,6 @@ input:focus {
 
     }
 
-    .news-content {
-        width: 100%;
-        position: absolute;
-        top: 150px;
-
-    }
 
     .news-content h3 {
         margin-top: 120px;
@@ -1702,11 +1698,6 @@ input:focus {
     .modal-dialog {
         margin-top: 150px;
     }
-
-    .modal-content {
-        height: 450px;
-    }
-
 
     .news-content input {
         width: 50%;
@@ -1758,33 +1749,6 @@ input:focus {
         width: 800px;
     }
 
-    .modal-dialog {
-        width: 95%;
-
-    }
-
-    .news-content {
-        width: 100%;
-        position: absolute;
-        top: 150px;
-
-    }
-
-    .news-content h3 {
-        margin-top: 120px;
-    }
-
-    .modal-dialog {
-
-        position: fixed;
-        bottom: 50px;
-        right: 0;
-
-    }
-
-    .modal-content {
-        height: 450px;
-    }
 
     .news-content p {
         width: 90%;
