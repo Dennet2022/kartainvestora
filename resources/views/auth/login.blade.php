@@ -4,6 +4,15 @@
     <!--start wrapper-->
     <div class="wrapper">
 
+        <a onclick="window.history.back()">
+            <div class="d-flex align-items-center p-2 cursor-pointer">
+                <div class="font-22">	<i class="lni lni-chevron-left"></i>
+                </div>
+                <div class="ms-2">	<span>Назад</span>
+                </div>
+            </div>
+        </a>
+
         <!--start content-->
         <main class="authentication-content">
             <div class="container-fluid">
