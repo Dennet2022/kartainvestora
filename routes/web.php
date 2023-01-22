@@ -179,6 +179,6 @@ Auth::routes();
 
 Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/{slug}', [\App\Http\Controllers\PostController::class, 'post'])->name('post');
+Route::middleware(['premium'])->get('/{slug}', [\App\Http\Controllers\PostController::class, 'post'])->name('post');
 
 
