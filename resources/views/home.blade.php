@@ -57,14 +57,13 @@
                 <h5 class="card-title">
                     {{ $post->title }}
                 </h5>
-                    <div href="{{ url($post->slug) }}">
-                        <div class="fotorama" data-allowfullscreen="true">
-                            @foreach($post->images as $image)
-                                <img src="/{{ $image->image }}">
-                            @endforeach
-                        </div>
+                <div href="{{ url($post->slug) }}">
+                    <div class="fotorama" data-allowfullscreen="true">
+                        @foreach($post->images as $image)
+                            <img src="/{{ $image->image }}">
+                        @endforeach
                     </div>
-                <img class="card-img rounded img-fluid imageMobile" style="display: none;" src="/{{ $post->image }}" alt="{{ $post->title }}">
+                </div>
                 <div class="card-body">
                     <p class="card-text">{!! $post->description !!}</p>
                     <a href="{{ url($post->slug) }}" class="card-btn">
