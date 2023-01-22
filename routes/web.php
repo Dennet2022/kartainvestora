@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('post.index');
 Route::get('/c/{category}', [\App\Http\Controllers\PostController::class, 'postsWithCategory'])->name('postsWithCategory');
 //------
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/', function () {
         return view('admin.pages.main');
     })->name('admin.main');
@@ -38,6 +38,12 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         'edit' => 'admin.categories.edit',
         'destroy' => 'admin.categories.destroy'
     ]);
+    Route::resource('users', \App\Http\Controllers\Admin\UserController::class)
+        ->only(['index', 'update', 'edit'])->names([
+            'index' => 'admin.users.index',
+            'update' => 'admin.users.update',
+            'edit' => 'admin.users.edit',
+        ]);
 });
 
 Route::get('/longtermtrends-in-the-news', function () {

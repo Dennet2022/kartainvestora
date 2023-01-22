@@ -42,7 +42,7 @@ class PostController extends Controller
         $filename = $uuid . '.jpg';
 
         $fileData = $request->hasFile('image') && $request->file('image')->isValid() ? $request->file('image') : $request->get('image');
-        if($fileData) {
+        if ($fileData) {
             $image = \Intervention\Image\Facades\Image::make($fileData);
             $image->save($path . $filename);
         }
@@ -60,6 +60,7 @@ class PostController extends Controller
                 'title' => $request->title ?? Str::random(16),
                 'description' => $request->description ?? Str::random(16),
                 'image' => $fileData ? 'storage/images/' . $filename : '',
+                'premium' => $request->premium ?? 0,
             ]
         );
 
@@ -76,7 +77,7 @@ class PostController extends Controller
                         $filename = $uuid . '.jpg';
 
                         $fileData = $value;
-                        if($fileData) {
+                        if ($fileData) {
                             $i = \Intervention\Image\Facades\Image::make($fileData);
                             $i->save($path . $filename);
                             $image = 'storage/images/' . $filename;
@@ -88,7 +89,7 @@ class PostController extends Controller
                         $filenameGraph = $uuid . '.jpg';
 
                         $fileDataGraph = $value;
-                        if($fileDataGraph) {
+                        if ($fileDataGraph) {
                             $i = \Intervention\Image\Facades\Image::make($fileDataGraph);
                             $i->save($path . $filenameGraph);
                             $imageGraph = 'storage/images/' . $filenameGraph;
@@ -162,7 +163,7 @@ class PostController extends Controller
         $filename = $uuid . '.jpg';
 
         $fileData = $request->hasFile('image') && $request->file('image')->isValid() ? $request->file('image') : $request->get('image');
-        if($fileData) {
+        if ($fileData) {
             $image = \Intervention\Image\Facades\Image::make($fileData);
             $image->save($path . $filename);
         }
@@ -174,6 +175,7 @@ class PostController extends Controller
                 'slug' => $request->slug,
                 'title' => $request->title,
                 'description' => $request->description ?? null,
+                'premium' => $request->premium ?? 0,
             ]
         );
 
@@ -206,7 +208,7 @@ class PostController extends Controller
                         $filename = $uuid . '.jpg';
 
                         $fileData = $value;
-                        if($fileData) {
+                        if ($fileData) {
                             $i = \Intervention\Image\Facades\Image::make($fileData);
                             $i->save($path . $filename);
                             $image = 'storage/images/' . $filename;
@@ -218,7 +220,7 @@ class PostController extends Controller
                         $filenameGraph = $uuid . '.jpg';
 
                         $fileDataGraph = $value;
-                        if($fileDataGraph) {
+                        if ($fileDataGraph) {
                             $i = \Intervention\Image\Facades\Image::make($fileDataGraph);
                             $i->save($path . $filenameGraph);
                             $imageGraph = 'storage/images/' . $filenameGraph;

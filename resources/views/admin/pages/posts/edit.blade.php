@@ -113,6 +113,13 @@
                                 </div>
 
                                 <div class="col-12">
+                                    <input class="form-check-input" type="checkbox" value="1" id="premium" name="premium" @if($post->premium) checked @endif>
+                                    <label class="form-check-label" for="premium">
+                                        Premium
+                                    </label>
+                                </div>
+
+                                <div class="col-12">
                                     <button type="submit" class="btn btn-primary px-4">Submit</button>
                                 </div>
                             </form>

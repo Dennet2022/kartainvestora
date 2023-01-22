@@ -528,6 +528,7 @@
                             </div>
                             <a href="{{ route('admin.posts.index') }}" class="list-group-item"><i class="bi bi-wallet"></i>Posts</a>
                             <a href="{{ route('admin.categories.index') }}" class="list-group-item"><i class="bi bi-card-text"></i>Categories</a>
+                            <a href="{{ route('admin.users.index') }}" class="list-group-item"><i class="bi bi-card-text"></i>Users</a>
 {{--                            <a href="index3.html" class="list-group-item"><i class="bi bi-bar-chart-line"></i>Analytics</a>--}}
 {{--                            <a href="index4.html" class="list-group-item"><i class="bi bi-archive"></i>Project Management</a>--}}
 {{--                            <a href="index5.html" class="list-group-item"><i class="bi bi-cast"></i>CMS Dashboard</a>--}}

@@ -1730,3 +1730,7 @@ a {
 		display: none
 	}
 }
+
+.display-block {
+    display: block;
+}
