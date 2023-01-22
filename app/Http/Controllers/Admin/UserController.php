@@ -44,12 +44,12 @@ class UserController extends Controller
         return redirect()->route('admin.users.index');
     }
 
-//    public function destroy(Request $request)
-//    {
-//        $categoryId = $request->category;
-//        $category = Category::find($categoryId);
-//        $category->delete();
-//
-//        return redirect()->route('admin.categories.index');
-//    }
+    public function destroy(Request $request)
+    {
+        $userId = $request->user;
+        $user = User::find($userId);
+        $user->delete();
+
+        return redirect()->route('admin.users.index');
+    }
 }

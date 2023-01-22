@@ -64,11 +64,11 @@
                                                 <td>
                                                     <div class="d-flex align-items-center gap-3 fs-6">
                                                         <a href="{{ url(route('admin.users.edit', $user->id)) }}" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Edit info" aria-label="Edit"><i class="bi bi-pencil-fill"></i></a>
-{{--                                                        <form id="delete-{{ $user->id }}" action="{{ route('admin.categories.destroy', $user->id) }}" method="POST">--}}
-{{--                                                            @csrf--}}
-{{--                                                            @method('DELETE')--}}
-{{--                                                            <a href="#" onclick="document.getElementById('delete-{{ $user->id }}').submit()" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="bi bi-trash-fill"></i></a>--}}
-{{--                                                        </form>--}}
+                                                        <form id="delete-{{ $user->id }}" action="{{ route('admin.users.destroy', $user->id) }}" method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <a href="#" onclick="document.getElementById('delete-{{ $user->id }}').submit()" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="bi bi-trash-fill"></i></a>
+                                                        </form>
                                                     </div>
                                                 </td>
                                             </tr>

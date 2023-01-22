@@ -39,10 +39,11 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         'destroy' => 'admin.categories.destroy'
     ]);
     Route::resource('users', \App\Http\Controllers\Admin\UserController::class)
-        ->only(['index', 'update', 'edit'])->names([
+        ->only(['index', 'update', 'edit', 'destroy'])->names([
             'index' => 'admin.users.index',
             'update' => 'admin.users.update',
             'edit' => 'admin.users.edit',
+            'destroy' => 'admin.users.destroy',
     ]);
     Route::resource('images', \App\Http\Controllers\Admin\ImageController::class)
         ->only(['destroy'])->names([
