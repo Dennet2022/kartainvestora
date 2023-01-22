@@ -12,9 +12,9 @@
                 <p>Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные графики с богатыми историческими данными и сделать их доступными для вас.</p>
             </div>
             <form class="mail" id="form">
-                <input placeholder="Ежемесячное обновление" id="email-subscribe-input" onkeydown="validation()"
+                <input placeholder="Инструмент, Тикер, ISIN" id="email-subscribe-input" onkeydown="validation()"
                        class="">
-                <div id="email-subscribe-submit" class="sub button">Подписаться</div>
+                <div id="email-subscribe-submit" class="sub button">Отправить</div>
                 <span class="" id="verify-msg" style="display:none;"></span>
             </form>
             <div class="images">
