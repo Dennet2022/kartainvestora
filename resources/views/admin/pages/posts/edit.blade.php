@@ -29,6 +29,12 @@
         </div>
         <!--end breadcrumb-->
 
+        @foreach($post->images as $image)
+            <form id="delete-{{ $image->id }}" action="{{ route('admin.images.destroy', $image->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+            </form>
+        @endforeach
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="card">
@@ -62,11 +68,20 @@
                                     <input name="slug" type="text" class="form-control" placeholder="Slug" value="{{ $post->slug }}">
                                 </div>
 
-                                <div class="col-12">
-                                    <label class="form-label">Image OR delete image <input type="checkbox" name="deleteImage" value="1"></label>
-                                    <input name="image" class="form-control" type="file" accept="image/*">
-                                </div>
+{{--                                <div class="col-12">--}}
+{{--                                    <label class="form-label">Image OR delete image <input type="checkbox" name="deleteImage" value="1"></label>--}}
+{{--                                    <input name="image" class="form-control" type="file" accept="image/*">--}}
+{{--                                </div>--}}
 
+                                @foreach($post->images as $image)
+                                    <div class="col-12">
+                                        <label class="form-label">Image</label>
+                                        <a href="#" onclick="document.getElementById('delete-{{ $image->id }}').submit()" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete">[x]</a>
+                                        <div class="fotorama">
+                                            <img style="max-width: 100%;max-height:100px;margin-bottom: 0.5rem;" src="/{{ $image->image }}">
+                                        </div>
+                                    </div>
+                                @endforeach
                                 @foreach(\App\Models\Content::where('post_id', $post->id)->orderBy('sort')->get() as $content)
                                     @if(!empty($content->image_graph))
                                         <div class="col-12" id="block{{ $content->id }}">
@@ -102,6 +117,7 @@
                                     <strong>Add more content:</strong>
                                     <div class="col-lg-6">
                                         <select class="form-control" id="typeContent">
+                                            <option value="image">Image</option>
                                             <option value="image_graph">Image Graph</option>
                                             <option value="graph">Graph</option>
                                             <option value="content">Content</option>
@@ -127,7 +143,7 @@
                     </div>
                 </div>
             </div>
-        </div><!--end row-->
+        </div>
 
     </main>
 
@@ -156,14 +172,20 @@
             let pasteBeforeMe = $('#pasteBeforeMe');
 
             let random1 = getRandomInt(1000000);
+            let random3 = getRandomInt(1000000);
             let random2 = getRandomInt(1000000);
             let random4 = getRandomInt(1000000);
 
             let indexInput = $('.countInput').length + 1;
 
+            let image = '<div class="col-12" id="block'+ random3 +'"> <label class="form-label">Image</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random3 +')">X</strong> <input name="images['+ indexInput +']" class="form-control countInput" type="file" accept="image/*"></textarea> </div>';
             let imageGraph = '<div class="col-12" id="block'+ random1 +'"> <label class="form-label">Image Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random1 +')">X</strong> <input name="blocks['+ indexInput +'][image_graph]" class="form-control countInput" type="file" accept="image/*"></textarea> </div>';
             let graph = '<div class="col-12" id="block'+ random2 +'"> <label class="form-label">Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random2 +')">X</strong> <textarea name="blocks['+ indexInput +'][graph]" class="form-control countInput" placeholder="Graph" rows="4" cols="4"></textarea> </div>';
             let content = '<div class="col-12" id="block'+ random4 +'"> <label class="form-label">Content</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random4 +')">X</strong> <textarea class="tiny countInput" name="blocks['+ indexInput +'][content]"></textarea> </div>';
+
+            if (typeContent === 'image') {
+                pasteBeforeMe.before(image);
+            }
 
             if (typeContent === 'image_graph') {
                 pasteBeforeMe.before(imageGraph);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Content;
+use App\Models\Image;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -38,14 +39,7 @@ class PostController extends Controller
             mkdir($path, 0777, true);
         }
 
-        $uuid = Uuid::uuid4()->toString();
-        $filename = $uuid . '.jpg';
-
-        $fileData = $request->hasFile('image') && $request->file('image')->isValid() ? $request->file('image') : $request->get('image');
-        if ($fileData) {
-            $image = \Intervention\Image\Facades\Image::make($fileData);
-            $image->save($path . $filename);
-        }
+        $images = $request->hasFile('images') ? $request->file('images') : [];
 
         $checkExistsSlug = Post::where('slug', $request->slug)->count();
 
@@ -59,10 +53,21 @@ class PostController extends Controller
                 'slug' => $request->slug ?? Str::random(16),
                 'title' => $request->title ?? Str::random(16),
                 'description' => $request->description ?? Str::random(16),
-                'image' => $fileData ? 'storage/images/' . $filename : '',
                 'premium' => $request->premium ?? 0,
             ]
         );
+
+        foreach ($images as $image) {
+            $uuid = Uuid::uuid4()->toString();
+            $filename = $uuid . '.jpg';
+
+            $image = \Intervention\Image\Facades\Image::make($image);
+            $image->save($path . $filename);
+            Image::create([
+                'post_id' => $post->id,
+                'image' => 'storage/images/' . $filename,
+            ]);
+        }
 
         if (null !== $post && !empty($request->blocks)) {
             foreach ($request->blocks as $key => $block) {
@@ -120,21 +125,21 @@ class PostController extends Controller
             }
         }
 
-        if ($request->deleteImage == 1) {
-            $post->update(
-                [
-                    'image' => '',
-                ]
-            );
-        } else {
-            if ($fileData) {
-                $post->update(
-                    [
-                        'image' => 'storage/images/' . $filename,
-                    ]
-                );
-            }
-        }
+//        if ($request->deleteImage == 1) {
+//            $post->update(
+//                [
+//                    'image' => '',
+//                ]
+//            );
+//        } else {
+//            if (isset($fileData)) {
+//                $post->update(
+//                    [
+//                        'image' => 'storage/images/' . $filename,
+//                    ]
+//                );
+//            }
+//        }
 
         // ----
 
@@ -159,14 +164,25 @@ class PostController extends Controller
 
         $path = storage_path() . '/app/public/images/';
 
-        $uuid = Uuid::uuid4()->toString();
-        $filename = $uuid . '.jpg';
+        $images = $request->hasFile('images') ? $request->file('images') : [];
 
-        $fileData = $request->hasFile('image') && $request->file('image')->isValid() ? $request->file('image') : $request->get('image');
-        if ($fileData) {
-            $image = \Intervention\Image\Facades\Image::make($fileData);
+        foreach ($images as $image) {
+            $uuid = Uuid::uuid4()->toString();
+            $filename = $uuid . '.jpg';
+
+            $image = \Intervention\Image\Facades\Image::make($image);
             $image->save($path . $filename);
+            Image::create([
+                'post_id' => $postId,
+                'image' => 'storage/images/' . $filename,
+            ]);
         }
+
+//        $fileData = $request->hasFile('image') && $request->file('image')->isValid() ? $request->file('image') : $request->get('image');
+//        if ($fileData) {
+//            $image = \Intervention\Image\Facades\Image::make($fileData);
+//            $image->save($path . $filename);
+//        }
 
         $post = Post::find($postId);
         $post->update(
@@ -208,6 +224,7 @@ class PostController extends Controller
                         $filename = $uuid . '.jpg';
 
                         $fileData = $value;
+                        dd($fileData);
                         if ($fileData) {
                             $i = \Intervention\Image\Facades\Image::make($fileData);
                             $i->save($path . $filename);
@@ -286,21 +303,21 @@ class PostController extends Controller
             }
         }
 
-        if ($request->deleteImage == 1) {
-            $post->update(
-                [
-                    'image' => '',
-                ]
-            );
-        } else {
-            if ($fileData) {
-                $post->update(
-                    [
-                        'image' => 'storage/images/' . $filename,
-                    ]
-                );
-            }
-        }
+//        if ($request->deleteImage == 1) {
+//            $post->update(
+//                [
+//                    'image' => '',
+//                ]
+//            );
+//        } else {
+//            if (isset($fileData)) {
+//                $post->update(
+//                    [
+//                        'image' => 'storage/images/' . $filename,
+//                    ]
+//                );
+//            }
+//        }
 
         return redirect(url($post->slug));
     }

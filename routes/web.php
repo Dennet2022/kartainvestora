@@ -43,7 +43,11 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
             'index' => 'admin.users.index',
             'update' => 'admin.users.update',
             'edit' => 'admin.users.edit',
-        ]);
+    ]);
+    Route::resource('images', \App\Http\Controllers\Admin\ImageController::class)
+        ->only(['destroy'])->names([
+            'destroy' => 'admin.images.destroy',
+    ]);
 });
 
 Route::get('/longtermtrends-in-the-news', function () {

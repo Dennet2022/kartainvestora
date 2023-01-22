@@ -48,7 +48,7 @@
                 @guest
                     @if($post->premium === 1)
                         <div class="bg-blur"></div>
-                        <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+                        <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 1;">
                             <svg class="text-danger" xmlns="http://www.w3.org/2000/svg" width="128" height="128" style="filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));"><path style="stroke:none;fill-rule:evenodd;fill:#656669;fill-opacity:1" d="M96 56c9 0 16 7 16 16v32c0 9-7 16-16 16H32c-9 0-16-7-16-16V72c0-9 7-16 16-16V40a32 32 0 0 1 64 0ZM64 19c12 0 21 9 21 21v16H43V40c0-12 9-21 21-21Zm32 48H32c-3 0-5 2-5 5v32c0 3 2 5 5 5h64c3 0 5-2 5-5V72c0-3-2-5-5-5Zm0 0"/></svg>
                             <h1 style="color: #656669;filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));">Premium</h1>
                         </div>
@@ -56,7 +56,7 @@
                 @else
                     @if($post->premium === 1 && auth()->user()->premium != 1)
                         <div class="bg-blur"></div>
-                        <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+                        <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 1;">
                             <svg class="text-danger" xmlns="http://www.w3.org/2000/svg" width="128" height="128" style="filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));"><path style="stroke:none;fill-rule:evenodd;fill:#656669;fill-opacity:1" d="M96 56c9 0 16 7 16 16v32c0 9-7 16-16 16H32c-9 0-16-7-16-16V72c0-9 7-16 16-16V40a32 32 0 0 1 64 0ZM64 19c12 0 21 9 21 21v16H43V40c0-12 9-21 21-21Zm32 48H32c-3 0-5 2-5 5v32c0 3 2 5 5 5h64c3 0 5-2 5-5V72c0-3-2-5-5-5Zm0 0"/></svg>
                             <h1 style="color: #656669;filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));">Premium</h1>
                         </div>
@@ -67,9 +67,13 @@
                 <h5 class="card-title">
                     {{ $post->title }}
                 </h5>
-                <div href="{{ url($post->slug) }}" class="imageFullscreen">
-                    <img class="card-img rounded img-fluid " src="/{{ $post->image }}" alt="{{ $post->title }}">
-                </div>
+                    <div href="{{ url($post->slug) }}">
+                        <div class="fotorama" data-allowfullscreen="true">
+                            @foreach($post->images as $image)
+                                <img src="/{{ $image->image }}">
+                            @endforeach
+                        </div>
+                    </div>
                 <img class="card-img rounded img-fluid imageMobile" style="display: none;" src="/{{ $post->image }}" alt="{{ $post->title }}">
                 <div class="card-body">
                     <p class="card-text">{!! $post->description !!}</p>

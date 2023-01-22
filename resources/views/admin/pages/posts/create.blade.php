@@ -59,15 +59,16 @@
                                     <label class="form-label">Slug</label>
                                     <input name="slug" type="text" class="form-control" placeholder="Slug">
                                 </div>
-                                <div class="col-12">
-                                    <label class="form-label">Image</label>
-                                    <input name="image" class="form-control" type="file" accept="image/*">
-                                </div>
+{{--                                <div class="col-12">--}}
+{{--                                    <label class="form-label">Image</label>--}}
+{{--                                    <input name="image" class="form-control" type="file" accept="image/*">--}}
+{{--                                </div>--}}
 
                                 <div class="row" id="pasteBeforeMe" style="margin-top:30px; padding: 15px; width:90%; margin-left:10px; border-radius: 10px; background: rgb(200,200,200);">
                                     <strong>Add more content:</strong>
                                     <div class="col-lg-6">
                                         <select class="form-control" id="typeContent">
+                                            <option value="image">Image</option>
                                             <option value="image_graph">Image Graph</option>
                                             <option value="graph">Graph</option>
                                             <option value="content">Content</option>
@@ -115,14 +116,20 @@
                 let pasteBeforeMe = $('#pasteBeforeMe');
 
                 let random1 = getRandomInt(1000000);
+                let random3 = getRandomInt(1000000);
                 let random2 = getRandomInt(1000000);
                 let random4 = getRandomInt(1000000);
 
                 let indexInput = $('.countInput').length + 1;
 
+                let image = '<div class="col-12" id="block'+ random3 +'"> <label class="form-label">Image</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random3 +')">X</strong> <input name="images['+ indexInput +']" class="form-control countInput" type="file" accept="image/*"></textarea> </div>';
                 let imageGraph = '<div class="col-12" id="block'+ random1 +'"> <label class="form-label">Image Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random1 +')">X</strong> <input name="blocks['+ indexInput +'][image_graph]" class="form-control countInput" type="file" accept="image/*"></textarea> </div>';
                 let graph = '<div class="col-12" id="block'+ random2 +'"> <label class="form-label">Graph</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random2 +')">X</strong> <textarea name="blocks['+ indexInput +'][graph]" class="form-control countInput" placeholder="Graph" rows="4" cols="4"></textarea> </div>';
                 let content = '<div class="col-12" id="block'+ random4 +'"> <label class="form-label">Content</label> <strong style="cursor: pointer;" onClick="removeBlock('+ random4 +')">X</strong> <textarea class="tiny countInput" name="blocks['+ indexInput +'][content]"></textarea> </div>';
+
+                if (typeContent === 'image') {
+                    pasteBeforeMe.before(image);
+                }
 
                 if (typeContent === 'image_graph') {
                     pasteBeforeMe.before(imageGraph);
