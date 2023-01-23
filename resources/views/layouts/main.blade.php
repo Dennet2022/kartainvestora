@@ -68,20 +68,33 @@
 <body class="light">
 
 <div class="modal" id="myModal" tabindex="-1" role="dialog">
-    <form class="mail modal-form">
+    <form class="modal-form">
 
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="">
-                  <span class="close-modal" id="closemodal">
+        <div class="modal-contents">
+            <span class="close-modal" id="closemodal">
                     <img src="/static/my_app/images/black-x.svg" class="close" alt="close">
-                  </span>
-                    <div class="content">
-                        <h3>Сохраните наш сайт</h3>
-                        <p>1. Нажмите на кнопку Поделиться (если вы не видите нижнего меню, нажмите внизу экрана).</p>
-                        <p>2. В появившемся меню выберите На экран «Домой».</p>
-                        <p>3. На следующем экране вы сможете дать своему шорткату подходящее название и проверить веб-адрес.</p>
-                        <p>4. Нажмите кнопку Добавить. На экране вашего iPhone или iPad появится ярлык нашего веб-ресурса. Достаточно нажать на него — и вы сразу же перейдете к любимому сайту.</p>
+            </span>
+            <div class="modal-up__content">
+                <img src="/favicon.png" class="app-image" alt="app">
+                <div>
+                    <h3>У нас появилось приложение!</h3>
+                </div>
+            </div>
+            <div class="modal-bottom__content">
+                <div class="dwnld-app-container">
+                    <p>
+                        Для установки нажмите на иконку
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M14.6464 7.35355C14.8417 7.54882 15.1583 7.54882 15.3536 7.35355C15.5488 7.15829 15.5488 6.84171 15.3536 6.64645L14.6464 7.35355ZM12 4L12.3536 3.64645C12.2598 3.55268 12.1326 3.5 12 3.5C11.8674 3.5 11.7402 3.55268 11.6464 3.64645L12 4ZM8.64645 6.64645C8.45118 6.84171 8.45118 7.15829 8.64645 7.35355C8.84171 7.54882 9.15829 7.54882 9.35355 7.35355L8.64645 6.64645ZM11.5 15C11.5 15.2761 11.7239 15.5 12 15.5C12.2761 15.5 12.5 15.2761 12.5 15L11.5 15ZM15.3536 6.64645L12.3536 3.64645L11.6464 4.35355L14.6464 7.35355L15.3536 6.64645ZM11.6464 3.64645L8.64645 6.64645L9.35355 7.35355L12.3536 4.35355L11.6464 3.64645ZM12.5 15L12.5 4L11.5 4L11.5 15L12.5 15Z" fill="#1A1A1A"/>
+                            <path d="M15.75 10L17.25 10C17.6642 10 18 10.2798 18 10.625L18 19.375C18 19.7202 17.6642 20 17.25 20L6.75 20C6.33579 20 6 19.7202 6 19.375L6 10.625C6 10.2798 6.33579 10 6.75 10L8.25 10" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <br>
+                        и в меню выберите «На экран “Домой”»
+                    </p>
+                    <div class="animated-arrow-box">
+                        <svg class="animated-arrow" viewBox="0 0 24 34">
+                            <path d="M13.5 2C13.5 1.17157 12.8284 0.5 12 0.5C11.1716 0.5 10.5 1.17157 10.5 2L13.5 2ZM10.9393 33.0607C11.5251 33.6464 12.4749 33.6464 13.0607 33.0607L22.6066 23.5147C23.1924 22.9289 23.1924 21.9792 22.6066 21.3934C22.0208 20.8076 21.0711 20.8076 20.4853 21.3934L12 29.8787L3.51472 21.3934C2.92893 20.8076 1.97918 20.8076 1.3934 21.3934C0.807611 21.9792 0.807611 22.9289 1.3934 23.5147L10.9393 33.0607ZM10.5 2L10.5 32L13.5 32L13.5 2L10.5 2Z" fill="#8B9A93"/>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -98,25 +111,26 @@
 
 @include('components.footer')
 
-<div id="incompatible-browser-modal" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+{{--<div id="incompatible-browser-modal" class="modal">--}}
+{{--    <div class="modal-dialog">--}}
+{{--        <div class="modal-content">--}}
 
-            <h4 class="modal-title">Your browser is out of date!</h4>
+{{--            <h4 class="modal-title">Your browser is out of date!</h4>--}}
 
-            <div class="modal-para">
-                <p>You are using an out of date browser that is missing certain Javascript features. For this reason,
-                    the charts
-                    cannot be displayed.</p>
-                <p>Please update to a modern browser: a list is available <a href="https://browsehappy.com/">here</a>.
-                </p>
-            </div>
+{{--            <div class="modal-para">--}}
+{{--                <p>You are using an out of date browser that is missing certain Javascript features. For this reason,--}}
+{{--                    the charts--}}
+{{--                    cannot be displayed.</p>--}}
+{{--                <p>Please update to a modern browser: a list is available <a href="https://browsehappy.com/">here</a>.--}}
+{{--                </p>--}}
+{{--            </div>--}}
 
-            <button type="button" data-dismiss="modal" class="more-charts modal-btn mod-close">Close</button>
+{{--            <button type="button" data-dismiss="modal" class="more-charts modal-btn mod-close">Close</button>--}}
 
-        </div>
-    </div>
-</div>
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
@@ -132,7 +146,7 @@
     <div id="error_txt" style="text-align: center;">
         <p>An error appeared while loading the data.
             Maybe there is a technical problem with the data source. Please let me know if this happens regularly <a
-                href="https://twitter.com/@silvan_frank">@silvan_frank</a>.</p>
+                href=""></a>.</p>
     </div>
 </div>
 <script type="text/javascript">

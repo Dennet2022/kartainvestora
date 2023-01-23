@@ -1,5 +1,6 @@
-// This is the javascript for the base.html files
-
+if (Cookies.get('modalAppear') !== "enabled" && /iPad|iPhone|iPod/.test(navigator.userAgent) && navigator.vendor.match(/apple/i)) {
+    Cookies.set('modalAppear', 'disabled', {expires: 6})
+}
 
 //**********************EMAIL validation input color
 function validation() {
@@ -32,12 +33,7 @@ function validationModal() {
 
 //this is for the modal
 if (Cookies.get('modalAppear') === "disabled") {
-    Cookies.set('modalAppear', 'enabled')
-}
-;
-
-
-if (Cookies.get('modalAppear') === "enabled" && /iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    Cookies.set('modalAppear', 'enabled');
     setTimeout(function () {
         $('#myModal').modal();
     }, 6000);
@@ -46,10 +42,6 @@ if (Cookies.get('modalAppear') === "enabled" && /iPad|iPhone|iPod/.test(navigato
 
 $('#closemodal').click(function () {
     $('#myModal').modal('hide');
-})
-
-$('#myModal').on('hidden.bs.modal', function () {
-    Cookies.set('modalAppear', 'disabled', {expires: 6})
 })
 
 

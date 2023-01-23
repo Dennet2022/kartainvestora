@@ -1668,7 +1668,7 @@ input:focus {
 
 @media only screen and (max-width: 800px) {
     .modal {
-        width: 95%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1712,11 +1712,6 @@ input:focus {
         width: 120px;
     }
 
-
-    .close-modal {
-        position: fixed;
-    }
-
     .news-content p {
         width: 60%;
     }
@@ -1733,9 +1728,7 @@ input:focus {
 /*mobile newsletter*/
 @media only screen and (max-width: 600px) {
     .modal {
-        width: 95%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100% !important;
     }
 
     .news-image {
@@ -1876,4 +1869,52 @@ input:focus {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+}
+
+.app-image {
+    height: 70px;
+    width: auto;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.modal-up__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.modal-up__content h3{
+    margin: 0;
+    font-size: 28px;
+}
+
+.modal-contents {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+}
+
+.modal-bottom__content p {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    font-size: 18px;
+}
+
+.animated-arrow-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.animated-arrow-box svg{
+    height: 30px;
+    width: auto;
 }
