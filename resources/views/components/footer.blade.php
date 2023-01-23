@@ -67,6 +67,6 @@
     </div>
 
     <div class="down">
-        <p>Charts powered by Tradingview. All rights reserved.</p>
+        <p>Графики предоставленны от Tradingview. Все права защищены.</p>
     </div>
 </footer>
