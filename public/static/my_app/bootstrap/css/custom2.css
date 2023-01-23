@@ -411,7 +411,8 @@ input:focus {
     /*height: 8rem;*/
     font-size: 16px;
     color: #474747;
-    padding-top: 20px;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
     text-align: center;
     display: block;
     margin: auto;
@@ -566,6 +567,20 @@ input:focus {
     filter: contrast(65%);
 }
 
+@media screen and (max-width: 1024px) {
+    .card-btn {
+        display: none;
+    }
+
+    .imageFullscreen {
+        display: none;
+    }
+
+    .imageMobile {
+        display: block !important;
+    }
+}
+
 /* PHOOOOOOOOOOOOOONE PHONE VERSION phone*/
 @media only screen and (max-width: 550px) {
     /*NAVBARR phone*/
@@ -712,7 +727,6 @@ input:focus {
     .card p {
         width: 30em;
         /*height: 8rem;*/
-        padding-bottom: 20px;
         font-size: 3vw;
         margin: auto;
     }
@@ -728,20 +742,6 @@ input:focus {
 
     .imageMobile {
         display: none;
-    }
-
-    @media screen and (max-width: 1024px) {
-        .card-btn {
-            display: none;
-        }
-
-        .imageFullscreen {
-            display: none;
-        }
-
-        .imageMobile {
-            display: block !important;
-        }
     }
 
     /* footer phone */
