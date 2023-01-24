@@ -24,8 +24,8 @@
             </div>
             <div class="featured" bis_skin_checked="1">
                 <h5>Наша цель: </h5>
-                <a class="financial">
-                    Видеть в графиках то, чего не замечают другие.</a>
+                <div class="financial">
+                    Видеть в графиках то, чего не замечают другие.</div>
                 <!--<a href="https://www.nytimes.com/2020/04/30/opinion/economy-stock-market-coronavirus.html" target="_blank"
                    class="new-york">The New York Times</a>-->
             </div>
