@@ -50,7 +50,7 @@
                         <div class="bg-blur"></div>
                         <div class="lock-svg">
                             <svg class="text-danger" xmlns="http://www.w3.org/2000/svg" width="128" height="128" style="opacity:0.3"><path style="stroke:none;fill-rule:evenodd;fill:#000;fill-opacity:1" d="M96 56c9 0 16 7 16 16v32c0 9-7 16-16 16H32c-9 0-16-7-16-16V72c0-9 7-16 16-16V40a32 32 0 0 1 64 0ZM64 19c12 0 21 9 21 21v16H43V40c0-12 9-21 21-21Zm32 48H32c-3 0-5 2-5 5v32c0 3 2 5 5 5h64c3 0 5-2 5-5V72c0-3-2-5-5-5Zm0 0"/></svg>
-                            <h1 style="color: #000;">Premium</h1>
+                            <h1 style="color: #B3B3B3;">Premium</h1>
                         </div>
                     </a>
                 @endif
