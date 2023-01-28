@@ -2,7 +2,7 @@
 
 @section('content')
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript" src="/static/my_app/js/homepage.js"></script>
+{{--    <script type="text/javascript" src="/static/my_app/js/homepage.js"></script>--}}
 
     <style>
         #notice-form-submit:hover {
@@ -29,8 +29,8 @@
                 <span class="" id="verify-msg" style="display:none;"></span>
             </form>
             <div class="images">
-                <img src="/static/my_app/images/stocks-vs-bonds.png" alt="stocks vs. bonds" class="head-img img1">
-                <img src="/static/my_app/images/real-interest-rate.png" alt="The real interest" class="head-img img2">
+                <img src="/static/my_app/images/stocks-vs-bonds.webp" alt="stocks vs. bonds" class="head-img img1">
+                <img src="/static/my_app/images/real-interest-rate.webp" alt="The real interest" class="head-img img2">
 
             </div>
             <div class="featured" bis_skin_checked="1">
@@ -73,7 +73,15 @@
                 <div href="{{ url($post->slug) }}">
                     <div class="fotorama" data-allowfullscreen="true">
                         @foreach($post->images as $image)
-                            <img src="/{{ $image->image }}">
+                            @php
+                                $img = str_replace('storage/images/', '', $image->image);
+                                $img_webp = str_replace('.jpg', '.webp', $img);
+                            @endphp
+                            @if(file_exists(storage_path('app/public/images/' . $img_webp)))
+                                <img src="{{ asset('storage/images/' . $img_webp) }}" alt="cover">
+                            @else
+                                <img src="{{ asset('storage/images/' . $img) }}" alt="cover">
+                            @endif
                         @endforeach
                     </div>
                 </div>

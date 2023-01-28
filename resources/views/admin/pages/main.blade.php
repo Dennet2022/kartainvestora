@@ -355,7 +355,7 @@
                     </div>
                     <div class="new-customer-list p-3">
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-1.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-1.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">Thomas Hardy</h6>
                                 <p class="mb-0 font-13">Customer ID #84586</p>
@@ -366,7 +366,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-2.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-2.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">Pauline Bird</h6>
                                 <p class="mb-0 font-13">Customer ID #86572</p>
@@ -377,7 +377,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-3.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-3.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">Ralph Alva</h6>
                                 <p class="mb-0 font-13">Customer ID #98657</p>
@@ -388,7 +388,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-4.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-4.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">John Roman</h6>
                                 <p class="mb-0 font-13">Customer ID #78542</p>
@@ -399,7 +399,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-5.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-5.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">David Buckley</h6>
                                 <p class="mb-0 font-13">Customer ID #68574</p>
@@ -410,7 +410,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-6.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-6.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">Maria Anders</h6>
                                 <p class="mb-0 font-13">Customer ID #86952</p>
@@ -421,7 +421,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-7.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-7.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">Martin Loother</h6>
                                 <p class="mb-0 font-13">Customer ID #83247</p>
@@ -432,7 +432,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-8.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-8.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">Victoria Hardy</h6>
                                 <p class="mb-0 font-13">Customer ID #67523</p>
@@ -443,7 +443,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-9.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-9.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">David Buckley</h6>
                                 <p class="mb-0 font-13">Customer ID #94256</p>
@@ -454,7 +454,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 customer-list-item">
-                            <img src="{{ url("assets/images/avatars/avatar-10.png") }}" class="rounded-circle" width="50" height="50" alt="">
+                            <img src="{{ url("assets/images/avatars/avatar-10.png") }}" class="rounded-circle" width="50" height="50" alt="img">
                             <div>
                                 <h6 class="mb-0">Victoria Hardy</h6>
                                 <p class="mb-0 font-13">Customer ID #48759</p>
@@ -509,7 +509,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-1.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-1.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from Michle Jhon</h6>
@@ -527,7 +527,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-2.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-2.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from Pauline Bird</h6>
@@ -545,7 +545,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-3.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-3.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from Ralph Alva</h6>
@@ -563,7 +563,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-4.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-4.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from John Roman</h6>
@@ -581,7 +581,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-7.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-7.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from David Buckley</h6>
@@ -599,7 +599,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-8.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-8.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from Lewis Cruz</h6>
@@ -617,7 +617,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-9.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-9.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from James Caviness</h6>
@@ -635,7 +635,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-10.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-10.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from Peter Costanzo</h6>
@@ -653,7 +653,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-11.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-11.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from Johnny Seitz</h6>
@@ -671,7 +671,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-12.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-12.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from Lewis Cruz</h6>
@@ -689,7 +689,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-13.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-13.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from David Buckley</h6>
@@ -707,7 +707,7 @@
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <div class="">
-                                                <img src="{{ url("assets/images/avatars/avatar-14.png") }}" class="rounded-circle" width="46" height="46" alt="" />
+                                                <img src="{{ url("assets/images/avatars/avatar-14.png") }}" class="rounded-circle" width="46" height="46" alt="img" />
                                             </div>
                                             <div class="ms-2">
                                                 <h6 class="mb-1 font-14">Payment from Thomas Wheeler</h6>

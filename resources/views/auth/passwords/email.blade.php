@@ -20,7 +20,7 @@
                     <div class="card shadow rounded-0 overflow-hidden">
                         <div class="row g-0">
                             <div class="col-lg-6 d-flex align-items-center justify-content-center border-end">
-                                <img src="{{ url('assets/images/error/forgot-password-frent-img.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ url('assets/images/error/forgot-password-frent-img.jpg') }}" class="img-fluid" alt="img">
                             </div>
                             <div class="col-lg-6">
                                 <div class="card-body p-4 p-sm-5">

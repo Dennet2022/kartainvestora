@@ -78,7 +78,7 @@
                                         <label class="form-label">Image</label>
                                         <a href="#" onclick="document.getElementById('delete-{{ $image->id }}').submit()" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Delete" aria-label="Delete">[x]</a>
                                         <div class="fotorama">
-                                            <img style="max-width: 100%;max-height:100px;margin-bottom: 0.5rem;" src="/{{ $image->image }}">
+                                            <img style="max-width: 100%;max-height:100px;margin-bottom: 0.5rem;" src="/{{ $image->image }}" alt="img">
                                         </div>
                                     </div>
                                 @endforeach

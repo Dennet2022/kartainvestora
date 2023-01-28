@@ -51,16 +51,16 @@ $('#closemodal').click(function () {
 
 const EMAIL_SUBSCRIBE_ENDPOINT_MODAL = '/email-subscribe/';
 
-document.getElementById('email-subscribe-submit-modal').addEventListener('click', function (e) {
-    e.preventDefault();
-    return true;
-});
+// document.getElementById('email-subscribe-submit-modal').addEventListener('click', function (e) {
+//     e.preventDefault();
+//     return true;
+// });
 
 
 const emailSubscribeInputModal = document.getElementById('email-subscribe-input-modal');
 const emailSubscribeSubmitModal = document.getElementById('email-subscribe-submit-modal');
 
-emailSubscribeSubmitModal.addEventListener('click', handleEmailSubscribeSubmitModal);
+// emailSubscribeSubmitModal.addEventListener('click', handleEmailSubscribeSubmitModal);
 const verifyMessageModal = document.getElementById('verify-msg-modal');
 
 function handleEmailSubscribeSubmitModal() {

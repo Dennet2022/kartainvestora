@@ -25,7 +25,7 @@
             <div class="col-md-12">
                 <div class="chart" id="chart1" style="height:300px">
                     <div class="loading" id="loading-animation">
-                        <img src="/static/my_app/images/loading.png" class="loading-sign">
+                        <img src="/static/my_app/images/loading.png" class="loading-sign" alt="img">
                         <h3>Loading Data</h3>
                         <h4>Please wait, we are loading chart data</h4>
                     </div>
@@ -35,7 +35,7 @@
             <div class="col-md-12">
                 <div class="chart" id="chart2" style="height:300px">
                     <div class="loading" id="loading-animation">
-                        <img src="/static/my_app/images/loading.png" class="loading-sign">
+                        <img src="/static/my_app/images/loading.png" class="loading-sign" alt="img">
                         <h3>Loading Data</h3>
                         <h4>Please wait, we are loading chart data</h4>
                     </div>
@@ -45,7 +45,7 @@
             <div class="col-md-12">
                 <div class="chart" id="chart6" style="height:300px">
                     <div class="loading" id="loading-animation">
-                        <img src="/static/my_app/images/loading.png" class="loading-sign">
+                        <img src="/static/my_app/images/loading.png" class="loading-sign" alt="img">
                         <h3>Loading Data</h3>
                         <h4>Please wait, we are loading chart data</h4>
                     </div>
@@ -55,7 +55,7 @@
             <div class="col-md-12">
                 <div class="chart" id="chart3" style="height:300px">
                     <div class="loading" id="loading-animation">
-                        <img src="/static/my_app/images/loading.png" class="loading-sign">
+                        <img src="/static/my_app/images/loading.png" class="loading-sign" alt="img">
                         <h3>Loading Data</h3>
                         <h4>Please wait, we are loading chart data</h4>
                     </div>
@@ -65,7 +65,7 @@
             <div class="col-md-12">
                 <div class="chart" id="chart4" style="height:300px">
                     <div class="loading" id="loading-animation">
-                        <img src="/static/my_app/images/loading.png" class="loading-sign">
+                        <img src="/static/my_app/images/loading.png" class="loading-sign" alt="img">
                         <h3>Loading Data</h3>
                         <h4>Please wait, we are loading chart data</h4>
                     </div>
@@ -75,7 +75,7 @@
             <div class="col-md-12">
                 <div class="chart" id="chart5" style="height:300px">
                     <div class="loading" id="loading-animation">
-                        <img src="/static/my_app/images/loading.png" class="loading-sign">
+                        <img src="/static/my_app/images/loading.png" class="loading-sign" alt="img">
                         <h3>Loading Data</h3>
                         <h4>Please wait, we are loading chart data</h4>
                     </div>
@@ -134,9 +134,9 @@
             <a href="https://www.tradingview.com/chart/laxzSxqR/?symbol=FRED%3ADGS10-FRED%3ADGS2&aff_id=27777&offer_id=10"
                target="_blank" id="tradingview_banner_link"><img
                     src="https://media.go2speed.org/brand/files/tradingview/10/20210720053108-Join_15M_En_336x280.png" width="336"
-                    height="280" border="0" /></a><img
+                    height="280" border="0" alt="img" /></a><img
                 src="https://tradingview.go2cloud.org/aff_i?offer_id=10&file_id=855&aff_id=27777" width="0" height="0"
-                style="position:absolute;visibility:hidden;" border="0" />
+                style="position:absolute;visibility:hidden;" border="0" alt="img" />
         </div>
     </div>
     <!-- /.container -->
@@ -151,7 +151,7 @@
             <div class="col-md-12">
                 <div class="chart" id="chart" style="height:500px">
                     <div class="loading" id="loading-animation">
-                        <img src="/static/my_app/images/loading.png" class="loading-sign">
+                        <img src="/static/my_app/images/loading.png" class="loading-sign" alt="img">
                         <h3>Loading Data</h3>
                         <h4>Please wait, we are loading chart data</h4>
                     </div>

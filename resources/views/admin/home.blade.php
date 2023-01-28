@@ -41,7 +41,7 @@
                         <li class="nav-item dropdown dropdown-large">
                             <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
                                 <div class="user-setting d-flex align-items-center gap-1">
-                                    <img src="{{ url("assets/images/avatars/avatar-1.png") }}" class="user-img" alt="">
+                                    <img src="{{ url("assets/images/avatars/avatar-1.png") }}" class="user-img" alt="img">
                                     <div class="user-name d-none d-sm-block">Jhon Deo</div>
                                 </div>
                             </a>
@@ -49,7 +49,7 @@
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-1.png") }}" alt="" class="rounded-circle" width="60" height="60">
+                                            <img src="{{ url("assets/images/avatars/avatar-1.png") }}" alt="img" class="rounded-circle" width="60" height="60">
                                             <div class="ms-3">
                                                 <h6 class="mb-0 dropdown-user-name">Jhon Deo</h6>
                                                 <small class="mb-0 dropdown-user-designation text-secondary">HR Manager</small>
@@ -233,7 +233,7 @@
                                     </div>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-1.png") }}" alt="" class="rounded-circle" width="52" height="52">
+                                            <img src="{{ url("assets/images/avatars/avatar-1.png") }}" alt="img" class="rounded-circle" width="52" height="52">
                                             <div class="ms-3 flex-grow-1">
                                                 <h6 class="mb-0 dropdown-msg-user">Amelio Joly <span class="msg-time float-end text-secondary">1 m</span></h6>
                                                 <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">The standard chunk of lorem...</small>
@@ -242,7 +242,7 @@
                                     </a>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-2.png") }}" alt="" class="rounded-circle" width="52" height="52">
+                                            <img src="{{ url("assets/images/avatars/avatar-2.png") }}" alt="img" class="rounded-circle" width="52" height="52">
                                             <div class="ms-3 flex-grow-1">
                                                 <h6 class="mb-0 dropdown-msg-user">Althea Cabardo <span class="msg-time float-end text-secondary">7 m</span></h6>
                                                 <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">Many desktop publishing</small>
@@ -251,7 +251,7 @@
                                     </a>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-3.png") }}" alt="" class="rounded-circle" width="52" height="52">
+                                            <img src="{{ url("assets/images/avatars/avatar-3.png") }}" alt="img" class="rounded-circle" width="52" height="52">
                                             <div class="ms-3 flex-grow-1">
                                                 <h6 class="mb-0 dropdown-msg-user">Katherine Pechon <span class="msg-time float-end text-secondary">2 h</span></h6>
                                                 <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">Making this the first true</small>
@@ -260,7 +260,7 @@
                                     </a>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-4.png") }}" alt="" class="rounded-circle" width="52" height="52">
+                                            <img src="{{ url("assets/images/avatars/avatar-4.png") }}" alt="img" class="rounded-circle" width="52" height="52">
                                             <div class="ms-3 flex-grow-1">
                                                 <h6 class="mb-0 dropdown-msg-user">Peter Costanzo <span class="msg-time float-end text-secondary">3 h</span></h6>
                                                 <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">It was popularised in the 1960</small>
@@ -269,7 +269,7 @@
                                     </a>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-5.png") }}" alt="" class="rounded-circle" width="52" height="52">
+                                            <img src="{{ url("assets/images/avatars/avatar-5.png") }}" alt="img" class="rounded-circle" width="52" height="52">
                                             <div class="ms-3 flex-grow-1">
                                                 <h6 class="mb-0 dropdown-msg-user">Thomas Wheeler <span class="msg-time float-end text-secondary">1 d</span></h6>
                                                 <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">If you are going to use a passage</small>
@@ -278,7 +278,7 @@
                                     </a>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-6.png") }}" alt="" class="rounded-circle" width="52" height="52">
+                                            <img src="{{ url("assets/images/avatars/avatar-6.png") }}" alt="img" class="rounded-circle" width="52" height="52">
                                             <div class="ms-3 flex-grow-1">
                                                 <h6 class="mb-0 dropdown-msg-user">Johnny Seitz <span class="msg-time float-end text-secondary">2 w</span></h6>
                                                 <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">All the Lorem Ipsum generators</small>
@@ -287,7 +287,7 @@
                                     </a>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-1.png") }}" alt="" class="rounded-circle" width="52" height="52">
+                                            <img src="{{ url("assets/images/avatars/avatar-1.png") }}" alt="img" class="rounded-circle" width="52" height="52">
                                             <div class="ms-3 flex-grow-1">
                                                 <h6 class="mb-0 dropdown-msg-user">Amelio Joly <span class="msg-time float-end text-secondary">1 m</span></h6>
                                                 <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">The standard chunk of lorem...</small>
@@ -296,7 +296,7 @@
                                     </a>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-2.png") }}" alt="" class="rounded-circle" width="52" height="52">
+                                            <img src="{{ url("assets/images/avatars/avatar-2.png") }}" alt="img" class="rounded-circle" width="52" height="52">
                                             <div class="ms-3 flex-grow-1">
                                                 <h6 class="mb-0 dropdown-msg-user">Althea Cabardo <span class="msg-time float-end text-secondary">7 m</span></h6>
                                                 <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">Many desktop publishing</small>
@@ -305,7 +305,7 @@
                                     </a>
                                     <a class="dropdown-item" href="#">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ url("assets/images/avatars/avatar-3.png") }}" alt="" class="rounded-circle" width="52" height="52">
+                                            <img src="{{ url("assets/images/avatars/avatar-3.png") }}" alt="img" class="rounded-circle" width="52" height="52">
                                             <div class="ms-3 flex-grow-1">
                                                 <h6 class="mb-0 dropdown-msg-user">Katherine Pechon <span class="msg-time float-end text-secondary">2 h</span></h6>
                                                 <small class="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">Making this the first true</small>
@@ -518,7 +518,7 @@
             </div>
             <div class="textmenu">
                 <div class="brand-logo">
-                    <img src="" width="140" alt=""/>
+                    <img src="" width="140" alt="img"/>
                 </div>
                 <div class="tab-content">
                     <div class="tab-pane fade" id="pills-dashboards">
