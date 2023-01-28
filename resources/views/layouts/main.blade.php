@@ -249,6 +249,8 @@
         $( "iframe" ).attr('width', w); // .attr('height', $(window).height()/100*90);
         console.log('window width');
         console.log(w);
+
+        $('#infoModal').show();
     });
 </script>
 

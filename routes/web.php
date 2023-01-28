@@ -49,6 +49,9 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
         ->only(['destroy'])->names([
             'destroy' => 'admin.images.destroy',
     ]);
+
+    Route::get('notices', [\App\Http\Controllers\Admin\NoticeController::class, 'index'])->name('admin.notices.index');
+    Route::delete('notices/{id}', [\App\Http\Controllers\Admin\NoticeController::class, 'destroy'])->name('admin.notices.destroy');
 });
 
 Route::get('/longtermtrends-in-the-news', function () {
@@ -175,6 +178,8 @@ Route::get('/home-price-vs-inflation', function () {
 Route::get('/home-price-vs-inflation', function () {
     return view('home-price-vs-inflation');
 });
+
+Route::post('notice', [\App\Http\Controllers\HomeController::class, 'notice'])->name('notice')->middleware(['middleware' => 'throttle:3,10']);
 
 Auth::routes();
 

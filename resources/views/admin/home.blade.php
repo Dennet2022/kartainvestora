@@ -469,6 +469,9 @@
 {{--                    <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Widgets">--}}
 {{--                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-widgets" type="button"><i class="bi bi-briefcase-fill"></i></button>--}}
 {{--                    </li>--}}
+                    <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Notices">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-notices" type="button"><i class="bi bi-briefcase-fill"></i></button>
+                    </li>
 {{--                    <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="eCommerce">--}}
 {{--                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-ecommerce" type="button"><i class="bi bi-bag-check-fill"></i></button>--}}
 {{--                    </li>--}}
@@ -559,6 +562,17 @@
                             </div>
                             <a href="widgets-static-widgets.html" class="list-group-item"><i class="bi bi-box"></i>Static Widgets</a>
                             <a href="widgets-data-widgets.html" class="list-group-item"><i class="bi bi-bar-chart"></i>Data Widgets</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-notices">
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-0">Notices</h5>
+                                </div>
+                                <small class="mb-0">Notice of signal from users</small>
+                            </div>
+                            <a href="{{ route('admin.notices.index') }}" class="list-group-item"><i class="bi bi-card-checklist"></i>List</a>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-ecommerce">

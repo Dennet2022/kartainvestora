@@ -1,9 +1,15 @@
 @extends('layouts.main')
 
 @section('content')
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="/static/my_app/js/homepage.js"></script>
-    <div class="content">
 
+    <style>
+        #notice-form-submit:hover {
+            color: white !important;
+        }
+    </style>
+    <div class="content">
 
         <!-- HEADER -->
         <div class="header">
@@ -11,10 +17,15 @@
                 <h2>Найдите самые интересные финансовые модели!</h2>
                 <p>Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные графики с богатыми историческими данными и сделать их доступными для вас.</p>
             </div>
-            <form class="mail" id="form">
-                <input placeholder="Инструмент, Тикер, ISIN" id="email-subscribe-input" onkeydown="validation()"
-                       class="">
-                <div id="email-subscribe-submit" class="sub button">Отправить</div>
+            <form class="mail notice-form" id="form" action="{{ route('notice') }}" method="post">
+                @csrf
+                <input name="notice" type="text" maxlength="180" minlength="3" placeholder="Инструмент, Тикер, ISIN" id="notice-input" value="{{ old('notice') }}" autocomplete="off" required>
+                @if(auth()->check())
+                    <button type="submit" id="notice-form-submit" class="sub button" style="line-height: normal">Отправить</button>
+                @else
+                    <button id="notice-form-submit" class="sub button disabled" title="Для отправки формы - необходимо залогиниться"
+                            style="background: grey; text-decoration: none; cursor: not-allowed; line-height: normal" disabled>Отправить</button>
+                @endif
                 <span class="" id="verify-msg" style="display:none;"></span>
             </form>
             <div class="images">
@@ -77,4 +88,15 @@
             </div>
         @endforeach
     </div>
+
+    @if(session('sweetSuccess'))
+    <script>
+        swal({
+            title: "Отлично!",
+            text: "{{ session('sweetSuccess') }}",
+            icon: "success",
+            button: "Продолжнить",
+        });
+    </script>
+    @endif
 @endsection

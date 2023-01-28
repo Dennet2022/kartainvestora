@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Notice;
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,5 +26,19 @@ class HomeController extends Controller
     public function index()
     {
         return view('admin.home');
+    }
+
+    public function notice(Request $request, Authenticatable $user)
+    {
+        $notice = htmlentities(strip_tags(trim($request->notice)));
+
+        Notice::create([
+            'user_id' => $user->id,
+            'notice'  => $notice,
+        ]);
+
+        session()->flash('sweetSuccess', 'Ваше сообщение отправлено Администратору');
+
+        return back();
     }
 }
