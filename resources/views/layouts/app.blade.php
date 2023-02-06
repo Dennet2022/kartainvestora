@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="144x144" href="/favicon.png">
-    <title>Kartainvestora | Найдите самые интересные финансовые графики!</title>
+    <title>Kartainvestora | Найдите самые интересные финансовые графики!!</title>
     <meta name="description" content="Наша миссия состоит в том, чтобы найти наиболее интересные и познавательные графики с богатыми историческими данными и сделать их доступными для вас.">
 
 
