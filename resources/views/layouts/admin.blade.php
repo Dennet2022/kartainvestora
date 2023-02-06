@@ -102,7 +102,7 @@ to make these charts available online.">
     <div id="error_txt" style="text-align: center;">
         <p>An error appeared while loading the data.
             Maybe there is a technical problem with the data source. Please let me know if this happens regularly <a
-                href="https://twitter.com/@silvan_frank">@silvan_frank</a>.</p>
+                href="https://twitter.com/@Karta_investora">@Karta_investora</a>.</p>
     </div>
 </div>
 <script type="text/javascript">
